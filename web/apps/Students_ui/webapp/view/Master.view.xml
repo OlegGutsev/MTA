@@ -1,55 +1,82 @@
-<mvc:View
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m"
-    xmlns:f="sap.ui.layout.form"
-    xmlns:core="sap.ui.core"
-    controllerName="students.controller.Master">
-    <Page showHeader="false">
-        <f:SimpleForm
-            title="Students"
-            editable="true"
-            layout="ResponsiveGridLayout"
-            labelSpanXL="12" labelSpanL="12" labelSpanM="12"
-            labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0"
-            emptySpanS="0" columnsXL="3" columnsL="3" columnsM="3" singleContainerFullSize="false">
-            <f:content>
-                <core:Title text="User" />
-                <VBox>
-                    <Label text="{i18n>usid}"/>
-                    <Input value="{data>/usid}" enabled="false"/>
-
-                    <Label text="{i18n>name}" />
-                    <Input maxLength="70" value="{data>/name}"/>
-                </VBox>
-
-                <core:Title text="Address" />
-                <VBox>
-                    <Label text="{i18n>city}"/>
-                    <Input value="{data>/toAddress/city}"/>
-
-                    <Label text="{i18n>strt}"/>
-                    <Input value="{data>/toAddress/strt}"/>
-
-                    <Label text="{i18n>hnum}"/>
-                    <Input type="Number" value="{data>/toAddress/hnum}"/>
-                </VBox>
-            </f:content>
-        </f:SimpleForm>
-        <footer>
-            <OverflowToolbar visible="{config>/isEdit}">
-                <ToolbarSpacer/>
-                <Button type="Accept" text="{i18n>save}" press="onSave">
-                    <layoutData>
-                        <OverflowToolbarLayoutData priority="NeverOverflow"/>
-                    </layoutData>
-                </Button>
-                <Button type="Reject" text="{i18n>cancel}" press="onCancel">
-                    <layoutData>
-                        <OverflowToolbarLayoutData priority="NeverOverflow"/>
-                    </layoutData>
-                </Button>
-            </OverflowToolbar>
-        </footer>
-    </Page>
-
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:fb="sap.ui.comp.filterbar"
+	controllerName="students.controller.Master" height="100%">
+	<fb:FilterBar id="filterBar" reset="onReset" search="onSearch" clear="onClear" cancel="onCancel" filtersDialogClosed="onFiltersDialogClosed"
+		showRestoreButton="true" showClearButton="true" showCancelButton="true">
+		<fb:filterGroupItems>
+			<fb:FilterGroupItem groupName="__$INTERNAL$" name="A" label="Name" partOfCurrentVariant="true" visibleInFilterBar="true">
+				<fb:control>
+					<Input type="Text" change="onChange"/>
+				</fb:control>
+			</fb:FilterGroupItem>
+			<fb:FilterGroupItem groupName="__$INTERNAL$" name="B" label="SurName" labelTooltip="Tooltip Example" partOfCurrentVariant="true"
+				visibleInFilterBar="true">
+				<fb:control>
+					<Input type="Text" change="onChange"/>
+				</fb:control>
+			</fb:FilterGroupItem>
+			<fb:FilterGroupItem groupName="G1" groupTitle="Group1" name="A" label="Company" labelTooltip="Tooltip GroupItem Example">
+				<fb:control>
+					<Input type="Text" change="onChange"/>
+				</fb:control>
+			</fb:FilterGroupItem>
+			<fb:FilterGroupItem groupName="G1" groupTitle="Group1" name="B" label="Customer">
+				<fb:control>
+					<Input type="Text" change="onChange"/>
+				</fb:control>
+			</fb:FilterGroupItem>
+			<fb:FilterGroupItem groupName="G2" groupTitle="Group2" name="A2" label="Supplier" labelTooltip="Tooltip GroupItem Example">
+				<fb:control>
+					<Input type="Text" change="onChange"/>
+				</fb:control>
+			</fb:FilterGroupItem>
+			<fb:FilterGroupItem groupName="G2" groupTitle="Group2" name="B2" label="Category">
+				<fb:control>
+					<Input type="Text" change="onChange"/>
+				</fb:control>
+			</fb:FilterGroupItem>
+		</fb:filterGroupItems>
+	</fb:FilterBar>
+	<Page showHeader="false" enableScrolling="true" class="sapUiContentPadding">
+		<content>
+			<Table busyIndicatorDelay="0" growing="true" growingScrollToLoad="true" noDataText="{i18n>tableNoDataText}"
+				items="{ path: '/Student', sorter: { path: 'studid', descending: false }, parameters: { $expand: 'toAddress,toGradeBook' } }" width="auto"
+				>
+				<headerToolbar>
+					<Toolbar>
+						<Title id="idStudentsTitle" text="{i18n>worklistTableTitle}" level="H3"/>
+						<ToolbarSpacer/>
+						<Button icon="sap-icon://action-settings" tooltip="{i18n>onSettings}" press="onSettings"/>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column width="20%">
+						<Text text="{i18n>name}"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>surname}"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>age}"/>
+					</Column>
+					<Column>
+						<Text text="city"/>
+					</Column>
+					<Column>
+						<Text text="GradeBook ID"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem type="Navigation" press="onGoToDetail">
+						<cells>
+							<ObjectIdentifier title="{studid}" text="{name}"/>
+							<Text text="{surNm}"/>
+							<Text text="{age}"/>
+							<FormattedText htmlText="{toAddress/city}&lt;br&gt;{toAddress/strt} {toAddress/hnum}"/>
+							<Text text="{toGradeBook/grdid}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
 </mvc:View>

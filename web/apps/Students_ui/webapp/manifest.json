@@ -12,6 +12,15 @@
     "sourceTemplate": {
       "id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
       "version": "1.40.12"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "http://localhost:3000/odata/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0"
+        }
+      }
     }
   },
   "sap.ui": {
@@ -61,14 +70,14 @@
         "settings": {
           "bundleName": "students.i18n.i18n"
         }
-      }
-    },
-    "resources": {
-      "css": [
-        {
-          "uri": "css/style.css"
+      },
+      "": {
+        "dataSource": "mainService",
+        "settings": {
+          "operationMode": "Server",
+          "synchronizationMode": "None"
         }
-      ]
+      }
     },
     "routing": {
       "config": {
@@ -81,13 +90,11 @@
           "target": "NotFound"
         }
       },
-      "routes": [
-        {
-          "pattern": "",
-          "name": "master",
-          "target": "Master"
-        }
-      ],
+      "routes": [{
+        "pattern": "",
+        "name": "master",
+        "target": "Master"
+      }],
       "targets": {
         "Master": {
           "viewType": "XML",

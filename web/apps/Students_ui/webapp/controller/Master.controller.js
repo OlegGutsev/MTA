@@ -10,14 +10,11 @@ sap.ui.define([
             //For local development. Start your NodeJS server.
             // this.host = "http://localhost:3000";
             //For cloud router. So... router will see prefix /api and will forward request to NodeJS in cloud
-            this.host = "/api";
+            //this.host = "/api";
             //For directly NodeJS. So request will be sent directly to NodeJS in cloud (replace with your uri)
             //this.host = "https://p2001017289trial-trial-dev-lev-srv.cfapps.eu10.hana.ondemand.com";
 
-            this.oDataModel = new JSONModel({
-                toAddress: {}
-            });
-            this.getView().setModel(this.oDataModel, "data");
+            this.getView().setModel(this.getOwnerComponent().getModel());
         },
 
 

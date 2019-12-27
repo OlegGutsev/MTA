@@ -1,5 +1,5 @@
 {
-  "welcomeFile": "Students_ui/index.html",
+  "welcomeFile": "students/index.html",
   "authenticationMethod": "none",
   "routes": [
     {

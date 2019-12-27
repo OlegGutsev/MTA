@@ -10,24 +10,22 @@
 		<!--FOR LOCAL USAGE-->
 		<!--src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"-->
 		<!--FOR CLOUD USAGE-->
-		<!--src="/sapui5_provider/sap-ui-core.js"-->
+		<!--src="/sapui5_resources/sap-ui-core.js"  /../../api/odata -->
 		<script id="sap-ui-bootstrap"
-      		src="/sapui5_resources/sap-ui-core.js"
+		    src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
 			data-sap-ui-async="true"
 			data-sap-ui-libs="sap.m"
 			data-sap-ui-theme="sap_belize"
 			data-sap-ui-compatVersion="edge"
-			data-sap-ui-resourceroots='{"Students_ui": "./"}'>
+			data-sap-ui-resourceroots='{"students": "./"}'>
 		</script>
-
-		<link rel="stylesheet" type="text/css" href="css/style.css">
 
 		<script>
 			sap.ui.getCore().attachInit(function() {
 				new sap.m.Shell({
 					app: new sap.ui.core.ComponentContainer({
 						height : "100%",
-						name : "Students_ui"
+						name : "students"
 					})
 				}).placeAt("content");
 			});
@@ -35,7 +33,6 @@
 	</head>
 
 	<body class="sapUiBody" id="content">
-	<p>Hello world</p>
 	</body>
 
 </html>

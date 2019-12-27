@@ -3,7 +3,7 @@ using Address as _Address from '../db/Address';
 using Subject as _Subject from '../db/Subject';
 using GradeBook as _GradeBook from '../db/GradeBook';
 
-service AcademicService @(path:'/browse') {
+service AcademicService {
 
   entity Student @(
 		title: 'Student',

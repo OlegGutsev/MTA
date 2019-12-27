@@ -59,7 +59,14 @@ module.exports = function () {
     this.after("READ", "Student", (entity) => {
         if (entity.length > 0) {
             // entity.forEach(item => item.mandt = "");
-            entity.forEach(item => item.name = "");
+            //entity.forEach(item => item.name = "");
+        }
+    });
+
+    this.after("READ", "Address", (entity) => {
+        if (entity.length > 0) {
+            // entity.forEach(item => item.mandt = "");
+            //entity.forEach(item => item.name = "");
         }
     });
 
