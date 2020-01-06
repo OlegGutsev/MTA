@@ -7,5 +7,6 @@ sap.ui.define([], function () {
 				return "";
 			}
 			return parseFloat(sValue).toFixed(2);
-		}
+        }
+    }
 });

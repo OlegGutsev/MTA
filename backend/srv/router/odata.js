@@ -70,4 +70,18 @@ module.exports = function () {
         }
     });
 
+    this.after("READ", "Subject", (entity) => {
+        if (entity.length > 0) {
+            // entity.forEach(item => item.mandt = "");
+            //entity.forEach(item => item.name = "");
+        }
+    });
+
+    this.after("READ", "GradeBook", (entity) => {
+        if (entity.length > 0) {
+            // entity.forEach(item => item.mandt = "");
+            //entity.forEach(item => item.name = "");
+        }
+    });
+
 };

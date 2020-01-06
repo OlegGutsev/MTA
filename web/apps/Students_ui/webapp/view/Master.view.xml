@@ -1,52 +1,38 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:fb="sap.ui.comp.filterbar"
-	controllerName="students.controller.Master" height="100%">
-	<fb:FilterBar id="filterBar" reset="onReset" search="onSearch" clear="onClear" cancel="onCancel" filtersDialogClosed="onFiltersDialogClosed"
-		showRestoreButton="true" showClearButton="true" showCancelButton="true">
-		<fb:filterGroupItems>
-			<fb:FilterGroupItem groupName="__$INTERNAL$" name="A" label="Name" partOfCurrentVariant="true" visibleInFilterBar="true">
+	controllerName="students.controller.Master" height="100%">	
+	<fb:FilterBar reset="onResetFilter" search="onSearchFilter" id="filterBar" showRestoreButton="true" >
+        <fb:filterGroupItems>
+            <fb:FilterGroupItem groupName="Student Data" partOfCurrentVariant="true" visibleInFilterBar="true" groupTitle="Student" name="A" label="Name" labelTooltip="Student Name">
 				<fb:control>
-					<Input type="Text" change="onChange"/>
-				</fb:control>
+					<Input id="Fname" type="Text"/>
+				</fb:control>				
 			</fb:FilterGroupItem>
-			<fb:FilterGroupItem groupName="__$INTERNAL$" name="B" label="SurName" labelTooltip="Tooltip Example" partOfCurrentVariant="true"
-				visibleInFilterBar="true">
+            <fb:FilterGroupItem groupName="Student Data" partOfCurrentVariant="true" visibleInFilterBar="true" groupTitle="Student" name="B" label="SurName" labelTooltip="Student SurName">
 				<fb:control>
-					<Input type="Text" change="onChange"/>
-				</fb:control>
+					<Input id="Fsurname" type="Text"/>
+				</fb:control>				
 			</fb:FilterGroupItem>
-			<fb:FilterGroupItem groupName="G1" groupTitle="Group1" name="A" label="Company" labelTooltip="Tooltip GroupItem Example">
-				<fb:control>
-					<Input type="Text" change="onChange"/>
-				</fb:control>
-			</fb:FilterGroupItem>
-			<fb:FilterGroupItem groupName="G1" groupTitle="Group1" name="B" label="Customer">
-				<fb:control>
-					<Input type="Text" change="onChange"/>
-				</fb:control>
-			</fb:FilterGroupItem>
-			<fb:FilterGroupItem groupName="G2" groupTitle="Group2" name="A2" label="Supplier" labelTooltip="Tooltip GroupItem Example">
-				<fb:control>
-					<Input type="Text" change="onChange"/>
-				</fb:control>
-			</fb:FilterGroupItem>
-			<fb:FilterGroupItem groupName="G2" groupTitle="Group2" name="B2" label="Category">
-				<fb:control>
-					<Input type="Text" change="onChange"/>
-				</fb:control>
-			</fb:FilterGroupItem>
-		</fb:filterGroupItems>
-	</fb:FilterBar>
+        </fb:filterGroupItems>
+    </fb:FilterBar>		
 	<Page showHeader="false" enableScrolling="true" class="sapUiContentPadding">
 		<content>
-			<Table busyIndicatorDelay="0" growing="true" growingScrollToLoad="true" noDataText="{i18n>tableNoDataText}"
-				items="{ path: '/Student', sorter: { path: 'studid', descending: false }, parameters: { $expand: 'toAddress,toGradeBook' } }" width="auto"
+			<Table busyIndicatorDelay="0" growing="true" growingScrollToLoad="true" noDataText="{i18n>tableNoDataText}" id="StudentList"
+				items="{ path: '/Student', sorter: { path: 'studid', descending: false }, parameters: { $expand: 'toAddress,toGradeBook', $count: true } }" width="auto"
 				>
 				<headerToolbar>
-					<Toolbar>
-						<Title id="idStudentsTitle" text="{i18n>worklistTableTitle}" level="H3"/>
-						<ToolbarSpacer/>
-						<Button icon="sap-icon://action-settings" tooltip="{i18n>onSettings}" press="onSettings"/>
-					</Toolbar>
+					<OverflowToolbar>
+                        <content>
+						    <Title id="idStudentsTitle" text="{i18n>worklistTableTitle}" level="H3"/>
+						    <ToolbarSpacer/>
+                            <SearchField 
+											id="searchField"
+											width="auto"
+											placeholder="{i18n>searchFieldPlaceholder}"
+                                            liveChange=".onSearch"/>
+						    <Button icon="sap-icon://action-settings" tooltip="{i18n>onSettings}" press="onSettings"/>
+                        </content>
+					</OverflowToolbar>
+                    
 				</headerToolbar>
 				<columns>
 					<Column width="20%">
@@ -67,12 +53,21 @@
 				</columns>
 				<items>
 					<ColumnListItem type="Navigation" press="onGoToDetail">
+                        
 						<cells>
 							<ObjectIdentifier title="{studid}" text="{name}"/>
+                        </cells>
+                        <cells>
 							<Text text="{surNm}"/>
-							<Text text="{age}"/>
+                        </cells>
+                        <cells>
+							<ObjectNumber number="{age}"/>
+                        </cells>
+                        <cells>
 							<FormattedText htmlText="{toAddress/city}&lt;br&gt;{toAddress/strt} {toAddress/hnum}"/>
-							<Text text="{toGradeBook/grdid}"/>
+						</cells>
+                        <cells>
+                            <Text text="{toGradeBook/grdid}"/>
 						</cells>
 					</ColumnListItem>
 				</items>
