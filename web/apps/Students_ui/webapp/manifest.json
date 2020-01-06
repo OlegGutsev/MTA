@@ -15,7 +15,7 @@
     },
     "dataSources": {
       "mainService": {
-        "uri": "http://localhost:3000/odata/",
+        "uri": "https://c5274581trial-trial-dev-router.cfapps.eu10.hana.ondemand.com/api/odata/",
         "type": "OData",
         "settings": {
           "odataVersion": "4.0"
