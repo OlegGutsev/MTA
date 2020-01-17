@@ -1,14 +1,16 @@
 sap.ui.define([
     "students/controller/BaseController",
-    "sap/ui/model/json/JSONModel",
     "sap/ui/model/Sorter",
 	"sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator",
     "sap/ui/model/FilterType"
-], function (BaseController, JSONModel, Sorter, Filter, FilterOperator, FilterType) {
+], function (BaseController, Sorter, Filter, FilterOperator, FilterType) {
     "use strict";
 
     return BaseController.extend("students.controller.Main", {
+
+        _oDialog: null,
+
         onInit: function () {
             //For local development. Start your NodeJS server.
             // this.host = "http://localhost:3000";
@@ -18,21 +20,78 @@ sap.ui.define([
             //this.host = "https://p2001017289trial-trial-dev-lev-srv.cfapps.eu10.hana.ondemand.com";
 
             this.getView().setModel(this.getOwnerComponent().getModel());
-          
+            this.oRouter = this.getOwnerComponent().getRouter();
+
+            var oFB = this.getView().byId("filterbar");
+			if (oFB) {
+				oFB.variantsInitialized();
+			}
         },
 
-        onSearch : function () {
-			var oView = this.getView(),
-                sValue = oView.byId("searchField").getValue(),
-                
-				oFilter = new Filter("surNm", FilterOperator.Contains, sValue);
-
-			oView.byId("StudentList").getBinding("items").filter([oFilter]);
+        handleViewSettingsDialogButtonOpen: function(oEvent) {
+			if (!this._oDialog) {
+				this._oDialog = sap.ui.xmlfragment("students.fragment.MasterViewSettingDialog", this);
+				this.getView().addDependent(this._oDialog);
+			}
+			// toggle compact style
+			jQuery.sap.syncStyleClass("sapUiSizeCompact", this.getView(), this._oDialog);
+			this._oDialog.open();
         },
         
-        onResetFilter: function (oEvent) {
-			var sMessage = "onReset trigered";
-			MessageToast.show(sMessage);
+        handleViewSettingsDialogButtonConfirm: function(oEvent) {
+			var oTable = this.byId("StudentList");
+
+			var mParams = oEvent.getParameters();
+			var oBinding = oTable.getBinding("items");
+
+			// apply sorter to binding
+			// (grouping comes before sorting)
+			var sPath;
+			var bDescending;
+			var vGroup;
+			var aSorters = [];
+			
+			// Gather grouping info
+			if (mParams.groupItem) {
+				sPath = mParams.groupItem.getKey();
+				bDescending = mParams.groupDescending;
+				vGroup = this.mGroupFunctions !== und ? this.mGroupFunctions[sPath] : sPath;
+				aSorters.push(new Sorter(sPath, bDescending, vGroup === null ? true : vGroup));
+			}
+			
+			// Gather sorting info
+			sPath = mParams.sortItem.getKey();
+			bDescending = mParams.sortDescending;
+			aSorters.push(new Sorter(sPath, bDescending));
+			oBinding.sort(aSorters);
+        },
+        
+        onUpdateFinished: function(oEvent) {
+			// var oDataModel = this.oDataModel.getData();
+			// oDataModel.setProperty("/Master/count", oEvent.getSource().getBinding("items").getLength());
+		},
+
+        onSearch : function (oEvent) {
+            var sQuery = oEvent.getParameter("query");
+			var aFilters = [];
+			if( sQuery ) {
+                aFilters.push( new Filter("surNm", FilterOperator.Contains, sQuery) );
+				aFilters.push( new Filter("name", FilterOperator.Contains, sQuery) );
+            }
+			this.getView().byId("StudentList").getBinding("items").filter(aFilters.length === 0 ? aFilters : new Filter(aFilters, false));
+        },
+        
+        onClear: function(oEvent) {
+			var oFilterModel = this.getView().getModel();
+			oFilterModel.setProperty("/", {});
+			this.onSearch(null);
+        },
+        
+        onItemPress: function(oEvent) {
+            var oContext = oEvent.getSource().getBindingContext();
+			this.getOwnerComponent().getRouter().navTo("StudentDetail", {
+                studid : oContext.getProperty("studid")
+            });
 		},
 
 		onSearchFilter: function (oEvent) {
@@ -71,8 +130,23 @@ sap.ui.define([
             });
         },
 
+        onToggleHeader: function() {
+			this.getPage().setHeaderExpanded(!this.getPage().getHeaderExpanded());
+        },
+        
+        getPage: function() {
+			return this.getView().byId("dynamicPageId");
+		},
+
         onCancel: function(){
             this.oDataModel.setData();
-        }     
+        },
+
+        onExit : function () {
+			if (this._oDialog) {
+				this._oDialog.destroy();
+			}
+		},     
+
     });
 });

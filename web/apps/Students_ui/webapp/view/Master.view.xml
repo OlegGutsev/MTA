@@ -1,77 +1,124 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:fb="sap.ui.comp.filterbar"
-	controllerName="students.controller.Master" height="100%">	
-	<fb:FilterBar reset="onResetFilter" search="onSearchFilter" id="filterBar" showRestoreButton="true" >
-        <fb:filterGroupItems>
-            <fb:FilterGroupItem groupName="Student Data" partOfCurrentVariant="true" visibleInFilterBar="true" groupTitle="Student" name="A" label="Name" labelTooltip="Student Name">
-				<fb:control>
-					<Input id="Fname" type="Text"/>
-				</fb:control>				
-			</fb:FilterGroupItem>
-            <fb:FilterGroupItem groupName="Student Data" partOfCurrentVariant="true" visibleInFilterBar="true" groupTitle="Student" name="B" label="SurName" labelTooltip="Student SurName">
-				<fb:control>
-					<Input id="Fsurname" type="Text"/>
-				</fb:control>				
-			</fb:FilterGroupItem>
-        </fb:filterGroupItems>
-    </fb:FilterBar>		
-	<Page showHeader="false" enableScrolling="true" class="sapUiContentPadding">
-		<content>
-			<Table busyIndicatorDelay="0" growing="true" growingScrollToLoad="true" noDataText="{i18n>tableNoDataText}" id="StudentList"
-				items="{ path: '/Student', sorter: { path: 'studid', descending: false }, parameters: { $expand: 'toAddress,toGradeBook', $count: true } }" width="auto"
-				>
-				<headerToolbar>
-					<OverflowToolbar>
-                        <content>
-						    <Title id="idStudentsTitle" text="{i18n>worklistTableTitle}" level="H3"/>
-						    <ToolbarSpacer/>
-                            <SearchField 
-											id="searchField"
-											width="auto"
-											placeholder="{i18n>searchFieldPlaceholder}"
-                                            liveChange=".onSearch"/>
-						    <Button icon="sap-icon://action-settings" tooltip="{i18n>onSettings}" press="onSettings"/>
-                        </content>
-					</OverflowToolbar>
-                    
-				</headerToolbar>
-				<columns>
-					<Column width="20%">
-						<Text text="{i18n>name}"/>
-					</Column>
-					<Column>
-						<Text text="{i18n>surname}"/>
-					</Column>
-					<Column>
-						<Text text="{i18n>age}"/>
-					</Column>
-					<Column>
-						<Text text="city"/>
-					</Column>
-					<Column>
-						<Text text="GradeBook ID"/>
-					</Column>
-				</columns>
-				<items>
-					<ColumnListItem type="Navigation" press="onGoToDetail">
-                        
-						<cells>
-							<ObjectIdentifier title="{studid}" text="{name}"/>
-                        </cells>
-                        <cells>
-							<Text text="{surNm}"/>
-                        </cells>
-                        <cells>
-							<ObjectNumber number="{age}"/>
-                        </cells>
-                        <cells>
-							<FormattedText htmlText="{toAddress/city}&lt;br&gt;{toAddress/strt} {toAddress/hnum}"/>
-						</cells>
-                        <cells>
-                            <Text text="{toGradeBook/grdid}"/>
-						</cells>
-					</ColumnListItem>
-				</items>
-			</Table>
-		</content>
-	</Page>
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	xmlns:f="sap.f"
+	xmlns:layout="sap.ui.layout"
+	xmlns:fb="sap.ui.comp.filterbar"
+	xmlns:vm="sap.ui.comp.variants"
+	controllerName="students.controller.Master">
+
+	<f:DynamicPage id="dynamicPageId" headerExpanded="onToggleHeader" > 
+
+		<f:title>
+			<f:DynamicPageTitle>
+				<f:heading>
+					<vm:VariantManagement standardItemText="{i18n>VariantManagementStudents}">
+					</vm:VariantManagement>
+				</f:heading>
+			</f:DynamicPageTitle>
+		</f:title>
+
+		<f:header>
+			<f:DynamicPageHeader pinnable="true">
+					<f:content>
+						<fb:FilterBar id="filterbar" clear="onClear" search="onSearchFilter" useToolbar="false" showClearButton="true" showClearOnFB="true">
+							<!-- <fb:filterItems>
+								<fb:FilterItem name="A" label="Name">
+									<fb:control>
+										<Input id="Fname" type="Text"/>
+									</fb:control>				
+								</fb:FilterItem>								
+								<fb:FilterItem name="B" label="SurName">
+									<fb:control>
+										<Input id="Fsurname" type="Text"/>
+									</fb:control>				
+								</fb:FilterItem>			
+							</fb:filterItems> -->
+
+							<fb:filterGroupItems>
+            					<fb:FilterGroupItem groupName="Student Data" partOfCurrentVariant="true" visibleInFilterBar="true" groupTitle="Student" name="A" label="Name" labelTooltip="Student Name">
+									<fb:control>
+										<Input id="Fname" type="Text"/>
+									</fb:control>				
+								</fb:FilterGroupItem>
+            					<fb:FilterGroupItem groupName="Student Data" partOfCurrentVariant="true" visibleInFilterBar="true" groupTitle="Student" name="B" label="SurName" labelTooltip="Student SurName">
+									<fb:control>
+										<Input id="Fsurname" type="Text"/>
+									</fb:control>				
+								</fb:FilterGroupItem>
+								<fb:FilterGroupItem groupName="Student Data" partOfCurrentVariant="true" visibleInFilterBar="true" groupTitle="Student" name="C" label="Age" labelTooltip="Student Age">
+									<fb:control>
+										<Input id="FAge" type="Number"/>
+									</fb:control>				
+								</fb:FilterGroupItem>
+       						</fb:filterGroupItems>
+						</fb:FilterBar>
+					</f:content>
+			</f:DynamicPageHeader>
+		</f:header>
+
+		<f:content>
+				<Table
+					growing="true"
+					id="StudentList"
+					items="{ 
+							path: '/Student', 
+						 	sorter: { path: 'studid', descending: false }, 
+						 	parameters: { $expand: 'toAddress,toGradeBook', $count: true } 
+					}" 
+					updateFinished="onUpdateFinished"
+					class="sapFDynamicPageAlignContent">
+
+					<headerToolbar>
+						<OverflowToolbar>
+							<Title text="{i18n>worklistTableTitle}" level="H2"/>						
+							<ToolbarSpacer/>
+							<SearchField placeholder="{i18n>searchFieldPlaceholder}" id="searchField" search="onSearch" width="17.5rem"/>
+							<OverflowToolbarButton icon="sap-icon://add" type="Transparent" press="onAdd"/>
+							<OverflowToolbarButton tooltip="{i18n>viewSettingsDialog}" icon="sap-icon://drop-down-list" type="Transparent" press="handleViewSettingsDialogButtonOpen"/>
+						</OverflowToolbar>
+					</headerToolbar>
+
+					<columns>
+						<Column width="20%" demandPopin="true">
+							<Text text="{i18n>name}"/>
+						</Column>
+						<Column>
+							<Text text="{i18n>surname}"/>
+						</Column>
+						<Column>
+							<Text text="{i18n>age}"/>
+						</Column>
+						<Column>
+							<Text text="city"/>
+						</Column>
+						<Column>
+							<Text text="GradeBook ID"/>
+						</Column>
+					</columns>
+
+					<items>
+						<ColumnListItem type="Navigation"  press="onItemPress">
+							<cells>
+								<ObjectIdentifier title="{studid}" text="{name}"/>
+                        	</cells>
+                        	<cells>
+								<Text text="{surNm}"/>
+                        	</cells>
+                        	<cells>
+								<ObjectNumber number="{age}"/>
+                        	</cells>
+                        	<cells>
+								<FormattedText htmlText="{toAddress/city}&lt;br&gt;{toAddress/strt} {toAddress/hnum}"/>
+							</cells>
+                        	<cells>
+                            	<Text text="{toGradeBook/grdid}"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+
+				</Table>
+		</f:content>
+	</f:DynamicPage>
 </mvc:View>

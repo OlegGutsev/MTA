@@ -8,31 +8,23 @@
 		<title>Students</title>
 
 		<!--FOR LOCAL USAGE-->
-		<!--src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"-->
+		<!--src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"-- //"https://c5274581trial-trial-dev-router.cfapps.eu10.hana.ondemand.com/api/odata/", -->
 		<!--FOR CLOUD USAGE-->
 		<!--src="/sapui5_resources/sap-ui-core.js"  /../../api/odata -->
-		<script id="sap-ui-bootstrap"
-		    src="/sapui5_resources/sap-ui-core.js"
+		<script 
+			id="sap-ui-bootstrap"
+			src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+			data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
 			data-sap-ui-async="true"
 			data-sap-ui-libs="sap.m"
-			data-sap-ui-theme="sap_belize"
+			data-sap-ui-theme="sap_belize"			
 			data-sap-ui-compatVersion="edge"
 			data-sap-ui-resourceroots='{"students": "./"}'>
-		</script>
-
-		<script>
-			sap.ui.getCore().attachInit(function() {
-				new sap.m.Shell({
-					app: new sap.ui.core.ComponentContainer({
-						height : "100%",
-						name : "students"
-					})
-				}).placeAt("content");
-			});
 		</script>
 	</head>
 
 	<body class="sapUiBody" id="content">
+		<div data-sap-ui-component data-name="students" data-id="container" data-settings='{"id" : "students"}'></div>
 	</body>
 
 </html>

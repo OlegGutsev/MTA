@@ -4,7 +4,7 @@
     xmlns="sap.m"
     xmlns:f="sap.ui.layout.form"
     xmlns:core="sap.ui.core"
-    controllerName="students.controller.Master">
+    controllerName="user_display.controller.Master">
     <Page showHeader="false">
         <f:SimpleForm
             title="Students"

@@ -1,6 +1,8 @@
 <mvc:View
+	displayBlock="true"
+	height="100%"
 	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true">
-	<App id="app" busyIndicatorDelay="0"/>
+	xmlns:f="sap.f"
+	xmlns:mvc="sap.ui.core.mvc">
+		<App id="app" busyIndicatorDelay="0"/>
 </mvc:View>

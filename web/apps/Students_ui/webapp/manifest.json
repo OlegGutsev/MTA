@@ -1,5 +1,5 @@
 {
-  "_version": "1.8.0",
+  "_version": "1.17.0",
   "sap.app": {
     "id": "students",
     "type": "application",
@@ -15,7 +15,7 @@
     },
     "dataSources": {
       "mainService": {
-        "uri": "https://c5274581trial-trial-dev-router.cfapps.eu10.hana.ondemand.com/api/odata/",
+        "uri": "http://localhost:3000/odata/", 
         "type": "OData",
         "settings": {
           "odataVersion": "4.0"
@@ -46,14 +46,16 @@
   "sap.ui5": {
     "rootView": {
       "viewName": "students.view.App",
-      "type": "XML"
+      "type": "XML",
+      "async": true
     },
     "dependencies": {
       "minUI5Version": "1.60.1",
       "libs": {
         "sap.ui.core": {},
         "sap.m": {},
-        "sap.ui.layout": {},
+        "sap.f": {},
+        "sap.ui.layout": { "lazy": true },
         "sap.ushell": {},
         "sap.collaboration": {},
         "sap.ui.comp": {},
@@ -85,21 +87,42 @@
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
         "controlId": "app",
-        "controlAggregation": "pages",
         "viewPath": "students.view",
+        "clearControlAggregation": false,
+        "async": true,
         "bypassed": {
-          "target": "NotFound"
-        }
+					"target": "notFound"
+				}
       },
       "routes": [{
         "pattern": "",
-        "name": "master",
+        "name": "Master",
         "target": "Master"
+      },{
+        "pattern": "StudentDetail/{studid}",
+        "name": "StudentDetail",
+        "target": "StudentDetail"
       }],
       "targets": {
         "Master": {
           "viewType": "XML",
-          "viewName": "Master"
+          "transition": "slide",
+          "viewName": "Master",
+          "controlAggregation": "pages",
+          "viewLevel" : 1
+        },
+        "StudentDetail": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewName": "StudentDetail",
+          "controlAggregation": "pages",
+          "viewLevel" : 2
+        },
+        "notFound": {
+          "viewId": "notFound",
+          "viewName": "NotFound",
+          "transition": "show",
+          "controlAggregation": "pages"
         }
       }
     }

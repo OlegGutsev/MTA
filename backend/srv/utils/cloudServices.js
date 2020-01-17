@@ -103,11 +103,9 @@ const getOnPremiseSystemData = async (onPremiseSystem, sLang) => {
 
     const sEndpoint = onPremiseSystem.destinationConfiguration.URL +
 //-----------change code here to get another data
-        "/sap/opu/odata/sap/MM_PUR_PO_MAINT_V2_SRV/C_MM_PaymentTermValueHelp" +
+        "/sap/opu/odata/SAP/ZGUT_TEST_MARA/ZGUT_I_CMARATP" +
         "?sap-language=" + sLang.toLowerCase() +
-        "&$format=json" +
-        "&$select=PaymentTerms,PaymentTermsName,NetPaymentDays" +
-        "&$orderby=PaymentTerms,NetPaymentDays";
+        "&$format=json";
 
     const oRequestOptions = {
         url: sEndpoint,

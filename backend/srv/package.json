@@ -5,6 +5,7 @@
   "dependencies": {
     "@sap/audit-logging": "^2.3.0",
     "@sap/cds": "3.5.2",
+    "@sap/cloud-sdk-core": "^1.15.0",
     "@sap/hana-client": "2.3.144",
     "@sap/hdbext": "^6.0.0",
     "@sap/logging": "^4.1.0",
@@ -45,5 +46,8 @@
     "data": {
       "driver": "hana"
     }
+  },
+  "devDependencies": {
+    "@sap/cloud-sdk-vdm-business-partner-service": "^1.15.0"
   }
 }
