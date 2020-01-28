@@ -33,7 +33,7 @@ module.exports = class {
 
     async getNextval(seqName) {
         try {
-						const sSql = `SELECT "${seqName}".NEXTVAL AS "ID" FROM "DUMMY"`;
+            const sSql = `SELECT "${seqName}".NEXTVAL AS "ID" FROM "DUMMY"`;
             const statement = await this.preparePromisified(sSql);
             const result = await this.statementExecPromisified(statement, []);
 

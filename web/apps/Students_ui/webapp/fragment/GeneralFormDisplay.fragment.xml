@@ -1,0 +1,39 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+    xmlns:forms="sap.ui.layout.form">
+    <VBox class="sapUiSmallMargin">
+        <forms:SimpleForm layout="ColumnLayout" id="GeneralDisplayForm" editable="false" width="auto">
+            <core:Title text="Addresses" />
+            <Label text="City" />
+            <Text id="DisplayAddressCity" text="{/toAddress/city}" />
+            <Label text="Street" />
+            <Text id="DisplayAddressStreet" text="{/toAddress/strt}" />
+            <Label text="Home Number" />
+            <Text id="DisplayAddressHomeNum" text="{/toAddress/hnum}" />
+
+            <core:Title text="GradeBook" />
+            <Label text="Start Date" />
+            <Text id="DisplayGradeBookStDate" text="{
+                                                path: '/toGradeBook/stdate',
+                                                type : 'sap.ui.model.type.Date',
+				                                formatOptions: {
+					                                style : 'long',
+                                                    source: {
+						                                pattern: 'yyyy-MM-dd' 
+                                                    }
+                                                }
+                                                }" />
+            <Label text="Course" />
+            <Text id="DisplayGradeBookCourse" text="{/toGradeBook/course}" />
+           
+            <core:Title text="Personal"/>
+		    <Label text="Name"/>
+		    <Text id="DisplayName" text="{/name}"/>
+		    <Label text="Second Name"/>
+		    <Text id="DisplaySurName" text="{/surnm}"/>
+		    <Label text="Age"/>
+		    <Text id="DisplayAge" text="{/age}"/>
+        </forms:SimpleForm>
+    </VBox>
+</core:FragmentDefinition>

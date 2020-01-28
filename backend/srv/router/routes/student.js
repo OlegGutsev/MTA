@@ -5,10 +5,12 @@
 const express = require("express");
 
 const dbClass = require(global.__base + "utils/dbClass");
+const dbModelClass = require(global.__base + "model/dbModelClass");
 
+const STUDENT = "STUDENT";
 
 function _prepareObject(oStudent, req) {
-		oStudent.changedBy = "DebugUser";
+    oStudent.changedBy = "DebugUser";
     return oStudent;
 }
 
@@ -24,13 +26,10 @@ module.exports = () => {
 
         try {
             const db = new dbClass(req.db);
-            const oStudent = _prepareObject(req.body, req);
-
-            const sSql = "SELECT * FROM \"STUDENT\" ";
-            const aStudents = await db.executeUpdate(sSql, []);
-
+            const dbModel = new dbModelClass(db, STUDENT, []);
+            const aStudents = await dbModel.getAllData();
             tracer.exiting("/student", aStudents);
-            res.type("application/json").status(201).send(JSON.stringify({aStudents}));
+            res.type("application/json").status(200).send(JSON.stringify(aStudents));
         } catch (e) {
             tracer.catching("/student", e);
             next(e);
@@ -40,34 +39,45 @@ module.exports = () => {
     app.post("/", async (req, res, next) => {
         try {
             const db = new dbClass(req.db);
+          //  const oStudent = _prepareObject(req.body, req);
 
-            const oStudent = _prepareObject(req.body, req);
-            oStudent.studid = await db.getNextval("studid");
+          //  oStudent.studid = await db.getNextval("studid");
 
-            const sSql = "INSERT INTO \"STUDENT\" VALUES(?,?,?,?)";
-						const aValues = [ oStudent.studid, oStudent.name, oStudent.surNm, oStudent.age ];
+          //  const aValues = [ oStudent.studid, oStudent.name, oStudent.surNm, oStudent.age ];
+            const dbModel = new dbModelClass(db, STUDENT, req.body);
 
-						console.log(aValues);
-						console.log(sSql);
-            await db.executeUpdate(sSql, aValues);
+            await dbModel.insertStudent();
 
-            res.type("application/json").status(201).send(JSON.stringify(oStudent));
+            res.type("application/json").status(201).send(JSON.stringify(req.body));
         } catch (e) {
             next(e);
         }
     });
 
-    app.put("/", async (req, res, next) => {
+    app.put("/:studid", async (req, res, next) => {
         try {
             const db = new dbClass(req.db);
-
             const oStudent = _prepareObject(req.body, req);
-            const sSql = "UPDATE \"STUDENT\" SET \"NAME\" = ? , \"SURNM\" = ?, \"AGE\" = ? WHERE \"STUDID\" = ?";
-						const aValues = [ oStudent.name, oStudent.surNm, oStudent.age, oStudent.studid ];
+            const dbModel = new dbModelClass(db, STUDENT, oStudent);
 
-            await db.executeUpdate(sSql, aValues);
+            await dbModel.updateStudent();
+            const aStudents = await dbModel.getComplexStudentById(oStudent.studid);
+            res.type("application/json").status(200).send(aStudents[0]);
+        } catch (e) {
+            next(e);
+        }
+    });
 
-            res.type("application/json").status(200).send(JSON.stringify(oStudent));
+    app.delete('/:studid', async (req, res, next) => {
+        try {
+            const db = new dbClass(req.db);
+            const oStudentId = req.params.studid;
+            const dbModel = new dbModelClass(db, STUDENT, [oStudentId]);
+
+            await dbModel.deleteStudent();
+            const aStudents = await dbModel.getAllData();
+
+            res.type("application/json").status(200).send(JSON.stringify(aStudents));
         } catch (e) {
             next(e);
         }

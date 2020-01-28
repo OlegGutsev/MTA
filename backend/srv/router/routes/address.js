@@ -10,7 +10,7 @@ const dbClass = require(global.__base + "utils/dbClass");
 function _prepareObject(oAddress, req) {
     oAddress.changedBy = "DebugUser";
     return oAddress;
-}
+};
 
 
 module.exports = () => {
@@ -68,6 +68,22 @@ module.exports = () => {
             await db.executeUpdate(sSql, aValues);
 
             res.type("application/json").status(200).send(JSON.stringify(oAddress));
+        } catch (e) {
+            next(e);
+        }
+    });
+
+    app.delete('/:adid', async (req, res, next) => {
+        try {
+            const db = new dbClass(req.db);
+
+            const oAddressId = req.params.adid;
+            const sSql = "DELETE \"ADDRESS\" WHERE \"ADID\" = ?";
+            const aValues = [ oAddressId ];
+
+            await db.executeUpdate(sSql, aValues);
+
+            res.type("application/json").status(200).send(JSON.stringify(oAddressId));
         } catch (e) {
             next(e);
         }
