@@ -1,0 +1,17 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+  
+    <ColumnListItem type="Active">
+		<cells>
+			<Input editable="false" value="{sbjid}"/>
+		</cells>
+	    <cells>
+			<Input value="{name}"/>
+		</cells>
+		<cells>
+			<Input type="Number" value="{mark}"/>
+		</cells>
+	</ColumnListItem>
+</core:FragmentDefinition>
+

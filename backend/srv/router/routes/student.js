@@ -39,16 +39,13 @@ module.exports = () => {
     app.post("/", async (req, res, next) => {
         try {
             const db = new dbClass(req.db);
-          //  const oStudent = _prepareObject(req.body, req);
-
-          //  oStudent.studid = await db.getNextval("studid");
-
-          //  const aValues = [ oStudent.studid, oStudent.name, oStudent.surNm, oStudent.age ];
-            const dbModel = new dbModelClass(db, STUDENT, req.body);
+            const oStudent = _prepareObject(req.body, req);
+            oStudent.studid = await db.getNextval("studid");
+            const dbModel = new dbModelClass(db, STUDENT, oStudent);
 
             await dbModel.insertStudent();
 
-            res.type("application/json").status(201).send(JSON.stringify(req.body));
+            res.type("application/json").status(201).send(JSON.stringify(oStudent));
         } catch (e) {
             next(e);
         }

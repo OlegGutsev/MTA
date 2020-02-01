@@ -5,6 +5,9 @@
 const express = require("express");
 
 const dbClass = require(global.__base + "utils/dbClass");
+const dbModelClass = require(global.__base + "model/dbModelClass");
+
+const SUBJECT = "SUBJECT";
 
 
 function _prepareObject(oSubject, req) {
@@ -40,34 +43,42 @@ module.exports = () => {
     app.post("/", async (req, res, next) => {
         try {
             const db = new dbClass(req.db);
-
             const oSubject = _prepareObject(req.body, req);
-            oSubject.grdid = await db.getNextval("grdid");
+            oSubject.sbjid = await db.getNextval("sbjid");
+            const dbModel = new dbModelClass(db, SUBJECT, oSubject);
 
-            const sSql = "INSERT INTO \"SUBJECT\" VALUES(?,?,?,?)";
-            const aValues = [ oSubject.sbjid, oSubject.grdid, oSubject.name, oSubject.mark ];
-
-            console.log(aValues);
-            console.log(sSql);
-            await db.executeUpdate(sSql, aValues);
-
+            await dbModel.insertSubject();
             res.type("application/json").status(201).send(JSON.stringify(oSubject));
         } catch (e) {
             next(e);
         }
     });
 
-    app.put("/", async (req, res, next) => {
+    app.put("/:sbjid", async (req, res, next) => {
         try {
             const db = new dbClass(req.db);
-
             const oSubject = _prepareObject(req.body, req);
-            const sSql = "UPDATE \"SUBJECT\" SET \"STUDID\" = ? , \"STDATE\" = ?, \"COURSE\" = ? WHERE \"GRDID\" = ?";
-            const aValues = [ oSubject.sbjid, oSubject.grdid, oSubject.name, oSubject.mark ];
+            const dbModel = new dbModelClass(db, SUBJECT, oSubject);
 
-            await db.executeUpdate(sSql, aValues);
+            await dbModel.updateSubject();
+            const aResult = await dbModel.getSubjectById(oSubject.sbjid);
 
-            res.type("application/json").status(200).send(JSON.stringify(oSubject));
+            res.type("application/json").status(200).send(JSON.stringify(aResult[0]));
+        } catch (e) {
+            next(e);
+        }
+    });
+
+    app.delete('/:sbjid', async (req, res, next) => {
+        try {
+            const db = new dbClass(req.db);
+            const oSubjectId = req.params.sbjid;
+            const dbModel = new dbModelClass(db, SUBJECT, [oSubjectId]);
+
+            await dbModel.deleteSubject();
+            const aSubjects = await dbModel.getAllData();
+
+            res.type("application/json").status(200).send(JSON.stringify(aSubjects));
         } catch (e) {
             next(e);
         }

@@ -102,21 +102,30 @@
         "pattern": "StudentDetail/{studid}",
         "name": "StudentDetail",
         "target": "StudentDetail"
+      },
+      {
+        "pattern": "GradeBookDetail/{grdid}/{sbjid}",
+        "name": "GradeBookDetail",
+        "target": "GradeBookDetail"
       }],
       "targets": {
         "Master": {
           "viewType": "XML",
           "transition": "slide",
           "viewName": "Master",
-          "controlAggregation": "pages",
-          "viewLevel" : 1
+          "controlAggregation": "pages"
         },
         "StudentDetail": {
           "viewType": "XML",
           "transition": "slide",
           "viewName": "StudentDetail",
-          "controlAggregation": "pages",
-          "viewLevel" : 2
+          "controlAggregation": "pages"
+        },
+        "GradeBookDetail": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewName": "GradeBookDetail",
+          "controlAggregation": "pages"
         },
         "notFound": {
           "viewId": "notFound",

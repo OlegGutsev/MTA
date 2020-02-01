@@ -33,13 +33,25 @@ module.exports = class {
         }
     }
 
+    async getSubjectById(sbjid) {
+        try {
+            const db = this.db;
+            const entity = this.entity;
+            const sSql = "SELECT * FROM \"" + entity + "\" WHERE \"SBJID\" = ?";
+
+            return await db.executeUpdate(sSql, [sbjid]);
+        } catch (error) {
+            throw new Error("DataBase " + entity + " error");
+        }
+    }
+
     async getComplexStudentById(studId) {
         try {
             const db = this.db;
             const entity = this.entity;
             const sSql = "SELECT STUDENT.*, TOADDRESS.ADID, TOADDRESS.CITY, TOADDRESS.STRT," +
-                                " TOGRADEBOOK.GRDID, TOADDRESS.HNUM, TOGRADEBOOK.STDATE, TOGRADEBOOK.COURSE FROM \"STUDENT\" " +
-                         "WHERE STUDENT.STUDID = ?";
+                " TOGRADEBOOK.GRDID, TOADDRESS.HNUM, TOGRADEBOOK.STDATE, TOGRADEBOOK.COURSE FROM \"STUDENT\" " +
+                "WHERE STUDENT.STUDID = ?";
 
             return await db.executeUpdate(sSql, [studId]);
         } catch (error) {
@@ -47,16 +59,13 @@ module.exports = class {
         }
     }
 
-    async insertStudent(){
+    async insertStudent() {
         try {
             const db = this.db;
             const entity = this.entity;
             const oStudent = this.params;
-
-            oStudent.studid = await db.getNextval("studid");
-
             const sSql = "INSERT INTO \"" + entity + "\" VALUES(?,?,?,?)";
-            const aValues = [ oStudent.studid, oStudent.name, oStudent.surnm, oStudent.age ];
+            const aValues = [oStudent.studid, oStudent.name, oStudent.surnm, oStudent.age];
             await Promise.all([db.executeUpdate(sSql, aValues),
                 this._insertAddress(),
                 this._insertGradeBook()
@@ -66,7 +75,22 @@ module.exports = class {
         }
     }
 
-    async _insertAddress(){
+    async insertSubject() {
+        try {
+            const db = this.db;
+            const entity = this.entity;
+            const oSubject = this.params;
+
+            const sSql = "INSERT INTO \"" + entity + "\" VALUES(?,?,?,?)";
+            const aValues = [oSubject.sbjid, oSubject.grdid, oSubject.name, oSubject.mark];
+
+            return await db.executeUpdate(sSql, aValues);
+        } catch (error) {
+            throw new Error("DataBase " + entity + " error");
+        }
+    }
+
+    async _insertAddress() {
         try {
             const db = this.db;
             const entity = "ADDRESS"
@@ -74,7 +98,7 @@ module.exports = class {
 
             oAddress.adid = await db.getNextval("adid");
             const sSql = "INSERT INTO \"" + entity + "\" VALUES(?,?,?,?,?)";
-            const aValues = [ oAddress.adid, this.params.studid, oAddress.city, oAddress.strt, oAddress.hnum ];
+            const aValues = [oAddress.adid, this.params.studid, oAddress.city, oAddress.strt, oAddress.hnum];
 
             await db.executeUpdate(sSql, aValues);
         } catch (error) {
@@ -82,7 +106,7 @@ module.exports = class {
         }
     }
 
-    async _insertGradeBook(){
+    async _insertGradeBook() {
         try {
             const db = this.db;
             const entity = "GRADEBOOK"
@@ -90,7 +114,7 @@ module.exports = class {
 
             oGradeBook.grdid = await db.getNextval("grdid");
             const sSql = "INSERT INTO \"" + entity + "\" VALUES(?,?,?,?)";
-            const aValues = [ oGradeBook.grdid, this.params.studid, oGradeBook.stdate, oGradeBook.course];
+            const aValues = [oGradeBook.grdid, this.params.studid, oGradeBook.stdate, oGradeBook.course];
 
             await db.executeUpdate(sSql, aValues);
         } catch (error) {
@@ -98,11 +122,11 @@ module.exports = class {
         }
     }
 
-    async updateStudent(){
+    async updateStudent() {
         try {
             const db = this.db;
             const entity = this.entity;
-            const params = [this.params.name, this.params.surnm, this.params.age, this.params.studid] ;
+            const params = [this.params.name, this.params.surnm, this.params.age, this.params.studid];
             const sSql = "UPDATE \"" + entity + "\" SET \"NAME\" = ? , \"SURNM\" = ?, \"AGE\" = ? WHERE \"STUDID\" = ?";
             await db.executeUpdate(sSql, params);
             await Promise.all([db.executeUpdate(sSql, params),
@@ -114,41 +138,55 @@ module.exports = class {
         }
     }
 
+    async updateSubject() {
+        try {
+            const db = this.db;
+            const entity = this.entity;
+            const params = [this.params.name, this.params.mark, this.params.sbjid];
+            const sSql = "UPDATE \"" + entity + "\" SET \"NAME\" = ? , \"MARK\" = ? WHERE \"SBJID\" = ?";
+
+            await db.executeUpdate(sSql, params);
+        } catch (error) {
+            throw new Error("DataBase " + entity + " error");
+        }
+    }
+
+
     async _updateAddressByStudentId() {
         try {
-            if(this.params.toAddress === null) return;
+            if (this.params.toAddress === null) return;
             const db = this.db;
             const entity = "ADDRESS";
             const params = [this.params.toAddress.city,
-                            this.params.toAddress.strt,
-                            this.params.toAddress.hnum,
-                            this.params.toAddress.adid ];
+                this.params.toAddress.strt,
+                this.params.toAddress.hnum,
+                this.params.toAddress.adid];
             const sSql = "UPDATE \"" + entity + "\" SET \"CITY\" = ?, \"STRT\" = ?, \"HNUM\" = ? WHERE \"ADID\" = ?";
             await db.executeUpdate(sSql, params);
-        } catch(error) {
+        } catch (error) {
             throw new Error("DataBase " + entity + " error");
         }
     }
 
-    async _updateGradeBookByStudentId(){
+    async _updateGradeBookByStudentId() {
         try {
-            if(this.params.toGradeBook === null) return;
+            if (this.params.toGradeBook === null) return;
             const db = this.db;
             const entity = "GRADEBOOK";
             const params = [
-                            this.params.toGradeBook.stdate,
-                            this.params.toGradeBook.course,
-                            this.params.toGradeBook.grdid
-                            ];
+                this.params.toGradeBook.stdate,
+                this.params.toGradeBook.course,
+                this.params.toGradeBook.grdid
+            ];
             const sSql = "UPDATE \"" + entity + "\" SET \"STDATE\" = ?, \"COURSE\" = ? WHERE \"GRDID\" = ?";
 
             await db.executeUpdate(sSql, params);
-        } catch(error) {
+        } catch (error) {
             throw new Error("DataBase " + entity + " error");
         }
     }
 
-    async deleteStudent(){
+    async deleteStudent() {
         try {
             const db = this.db;
             const entity = this.entity;
@@ -165,7 +203,20 @@ module.exports = class {
         }
     }
 
-    async _deleteAddressByStudentId(){
+    async deleteSubject() {
+        try {
+            const db = this.db;
+            const entity = this.entity;
+            const params = this.params;
+            const sSql = "DELETE FROM \"" + entity + "\" WHERE \"SBJID\" = ?";
+
+            await db.executeUpdate(sSql, params);
+        } catch (error) {
+            throw new Error("DataBase " + entity + " error");
+        }
+    }
+
+    async _deleteAddressByStudentId() {
         try {
             const db = this.db;
             const entity = "ADDRESS";
@@ -178,7 +229,7 @@ module.exports = class {
         }
     }
 
-    async _deleteGradeBookByStudentId(){
+    async _deleteGradeBookByStudentId() {
         try {
             const db = this.db;
             const entity = "GRADEBOOK";

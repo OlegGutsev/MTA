@@ -1,0 +1,16 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+    xmlns:forms="sap.ui.layout.form">
+    <VBox class="sapUiSmallMargin">
+        <forms:SimpleForm layout="ColumnLayout"  id="GeneralChangeForm" editable="true" width="auto">
+            <core:Title text="Subject" />
+            <Label text="GradeBook Id" />
+            <Text id="GradeBookId" text="{/grdid}" />
+            <Label text="Subject Name" />
+            <Input id="SubjectName" change="onChange" value="{/name}" />
+            <Label text="Mark" />
+            <Input id="SubjectMark" change="onChange" value="{/mark}" />
+        </forms:SimpleForm>
+    </VBox>
+</core:FragmentDefinition>

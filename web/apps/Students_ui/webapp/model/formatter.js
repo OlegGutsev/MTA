@@ -15,9 +15,21 @@ sap.ui.define([
 				return "";
 			}
 			return parseFloat(sValue).toFixed(2);
-		},
+        },
+        
+        formatterSubject: function(aSubject) {
+            if(aSubject.length > 0){
+                var aNewSubject = [];
+                aSubject.forEach(oSubject => {
+                    aNewSubject.push( Object.keys(oSubject).reduce((c, k) => (c[k.toLowerCase()] = oSubject[k], c), {}) );
+                })
+                return aNewSubject;
+            }
 
-		formatterStudent: function (oStudent) {
+            return Object.keys(aSubject).reduce((c, k) => (c[k.toLowerCase()] = aSubject[k], c), {});
+        },
+
+		formatterStudent: function (oStudent, aSubject) {
             oStudent = Object.keys(oStudent).reduce((c, k) => (c[k.toLowerCase()] = oStudent[k], c), {});
             oStudent.toAddress = {};
             oStudent.toGradeBook = {};
@@ -32,10 +44,12 @@ sap.ui.define([
 
             if (oStudent.grdid === null) {
                 oStudent.toGradeBook = null;
+                oStudent.toGradeBook.toSubject = [];
             } else {
+                oStudent.toGradeBook.toSubject = aSubject !== null ? aSubject : [];
                 oStudent.toGradeBook.grdid = oStudent.grdid;
                 oStudent.toGradeBook.course = oStudent.course !== null ? oStudent.course : 0;
-                oStudent.toGradeBook.stdate = oStudent.stdate !== null ? oStudent.stdate : this.dateFormat(new Date());                ;
+                oStudent.toGradeBook.stdate = oStudent.stdate !== null ? oStudent.stdate : this.dateFormat(new Date());      
             }
 
             delete oStudent.adid;

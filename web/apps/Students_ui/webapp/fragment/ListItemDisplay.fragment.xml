@@ -1,0 +1,17 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+  
+    <ColumnListItem type="Navigation"  press="onItemPress">
+		<cells>
+			<ObjectIdentifier title="{sbjid}"/>
+		</cells>
+	    <cells>
+			<Text text="{name}"/>
+		</cells>
+		<cells>
+			<ObjectNumber number="{mark}"/>
+		</cells>
+	</ColumnListItem>
+</core:FragmentDefinition>
+
