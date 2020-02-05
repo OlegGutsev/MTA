@@ -15,7 +15,7 @@ modules:
             - {name: lev_deployer}
         build-parameters:
             ignore: [".git/", ".idea/", ".gitignore", ".gitlab-ci.yml", "mta.jar", "mta.yaml"]
-            requires: [{name: Students_ui, artifacts: ['./*'], target-path: resources/Students_ui},{name: Student_details, artifacts: ['./*'], target-path: resources/Student_details}]
+            requires: [{name: Students_ui, artifacts: ['./*'], target-path: resources/Students_ui}]
         parameters:
             disk-quota: 256M
             memory: 128M
@@ -30,19 +30,6 @@ modules:
             disk-quota: 256M
             memory: 128M
         requires:
-            - {name: lev_uaa}
-    -
-        name: Student_details
-        type: html5
-        path: apps/Student_details
-        build-parameters:
-            ignore: [".git/", ".idea/", ".gitignore", ".gitlab-ci.yml", "mta.jar", "mta.yaml"]
-            builder: grunt
-        parameters:
-            disk-quota: 256M
-            memory: 128M
-        requires:
-            - {name: lev_uaa}
             - {name: lev_dest}
             - {name: lev_conn}
 resources:

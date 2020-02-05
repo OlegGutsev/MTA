@@ -12,12 +12,9 @@ sap.ui.define([
         _formFragments: {},
 
         onInit: function () {
-            //For local development. Start your NodeJS server.
-            this.host = "http://localhost:3000";
-            //For cloud router. So... router will see prefix /api and will forward request to NodeJS in cloud
-            //this.host = "/api";
-            //For directly NodeJS. So request will be sent directly to NodeJS in cloud (replace with your uri)
-            //this.host = "https://p2001017289trial-trial-dev-lev-srv.cfapps.eu10.hana.ondemand.com";
+           
+           
+            this.host = "https://p2001378267trial-dev-lev-srv.cfapps.eu10.hana.ondemand.com";
             this.aInputs = [];
             this.oDataModel = new JSONModel();
             this.getView().setModel(this.oDataModel);
@@ -51,7 +48,7 @@ sap.ui.define([
                 this.getView().getModel().setData({
                     grdid: oArgs.grdid
                 });
-                // this.getView().getModel().getData().grdid = oArgs.grdid;
+              
                 this.getView().getModel().setProperty("/post", true);
             } else {
                 this.getApp().setBusy(true);
@@ -263,53 +260,6 @@ sap.ui.define([
                 sId: sMarkId,
                 sValue: sMark
             });
-
-            // var oTable = this.byId("StudentList");
-            // var aItems = oTable.getSelectedItems();
-
-
-            // this.getApp().setBusy(true);
-            // aItems.forEach(item => {
-            //     var sItemPath = item.getBindingContext().getBinding().getPath();
-            //     var sItemId = item.getBindingContext().getProperty("studid");
-
-            //     jQuery.ajax({
-            //         type: "DELETE",
-            //         url: this.host + sItemPath + "/" + sItemId,
-            //         contentType: "application/json",
-            //         success: function(data){
-            //             MessageBox.success("Student " +  + sItemId + " was Deleted");
-            //             this.oDataModel.setData(data);
-            //             this.getApp().setBusy(false);
-            //         }.bind(this),
-            //         error: function(oError) {
-            //             this.getApp().setBusy(false);
-            //             jQuery.sap.log.error(oError);
-            //             MessageBox.error("Deleting student " + sItemId + " was failed");
-            //         }.bind(this)
-            //     });
-            // });
-            // var oData = this.oDataModel.getData();
-
-            // this.getApp().setBusy(true);
-            // jQuery.ajax({
-            //     type: "PUT",
-            //     url: this.host + "/odata/Student('" + oArgs.studid + "')" + "?$expand=toAddress,toGradeBook",
-            //     dataType: "json",
-            //     contentType: "application/json",
-            //     data: JSON.stringify(oData),
-            //     success: function(data){
-            //         sap.m.MessageBox.success("User Created");
-            //         this.oDataModel.setData(data);
-            //         this.getApp().setBusy(false);
-            //     }.bind(this),
-            //     error: function(oError){
-            //         this.getApp().setBusy(false);
-            //         jQuery.sap.log.error(oError);
-            //         sap.m.MessageBox.error("Creating failed");
-            //     }.bind(this)
-            // });
-
         }
     });
 });

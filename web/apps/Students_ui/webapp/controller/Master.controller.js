@@ -14,11 +14,11 @@ sap.ui.define([
 
         onInit: function () {
             //For local development. Start your NodeJS server.
-            this.host = "http://localhost:3000";
+            //this.host = "http://localhost:3000";
             //For cloud router. So... router will see prefix /api and will forward request to NodeJS in cloud
             //this.host = "/api";
             //For directly NodeJS. So request will be sent directly to NodeJS in cloud (replace with your uri)
-            //this.host = "https://p2001017289trial-trial-dev-lev-srv.cfapps.eu10.hana.ondemand.com";
+            this.host = "https://p2001378267trial-dev-lev-srv.cfapps.eu10.hana.ondemand.com";
             this.oDataModel = this.getOwnerComponent().getModel();
             this.getView().setModel(this.oDataModel);
             this.oRouter = this.getOwnerComponent().getRouter();
@@ -160,6 +160,7 @@ sap.ui.define([
                     contentType: "application/json",
                     success: function(){
                         this.oDataModel.refresh();
+                        this.byId("delButton").setEnabled(false);
                         this.getApp().setBusy(false);
                         MessageBox.success("Student " +  + sItemId + " was Deleted");
                     }.bind(this),

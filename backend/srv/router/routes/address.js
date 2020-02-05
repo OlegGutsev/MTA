@@ -8,7 +8,7 @@ const dbClass = require(global.__base + "utils/dbClass");
 
 
 function _prepareObject(oAddress, req) {
-    oAddress.changedBy = "DebugUser";
+  //  oAddress.changedBy = COMMON.getAjaxUser(req);
     return oAddress;
 };
 
@@ -52,38 +52,6 @@ module.exports = () => {
             await db.executeUpdate(sSql, aValues);
 
             res.type("application/json").status(201).send(JSON.stringify(oAddress));
-        } catch (e) {
-            next(e);
-        }
-    });
-
-    app.put("/", async (req, res, next) => {
-        try {
-            const db = new dbClass(req.db);
-
-            const oAddress = _prepareObject(req.body, req);
-            const sSql = "UPDATE \"ADDRESS\" SET \"STUDID\" = ?, \"CITY\" = ? , \"STRT\" = ?, \"HNUM\" = ? WHERE \"ADID\" = ?";
-            const aValues = [ oAddress.studid, oAddress.city, oAddress.strt, oAddress.hnum, oAddress.adid ];
-
-            await db.executeUpdate(sSql, aValues);
-
-            res.type("application/json").status(200).send(JSON.stringify(oAddress));
-        } catch (e) {
-            next(e);
-        }
-    });
-
-    app.delete('/:adid', async (req, res, next) => {
-        try {
-            const db = new dbClass(req.db);
-
-            const oAddressId = req.params.adid;
-            const sSql = "DELETE \"ADDRESS\" WHERE \"ADID\" = ?";
-            const aValues = [ oAddressId ];
-
-            await db.executeUpdate(sSql, aValues);
-
-            res.type("application/json").status(200).send(JSON.stringify(oAddressId));
         } catch (e) {
             next(e);
         }

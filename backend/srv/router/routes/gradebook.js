@@ -57,21 +57,5 @@ module.exports = () => {
         }
     });
 
-    app.put("/", async (req, res, next) => {
-        try {
-            const db = new dbClass(req.db);
-
-            const oGradeBook = _prepareObject(req.body, req);
-            const sSql = "UPDATE \"ADDRESS\" SET \"STUDID\" = ? , \"STDATE\" = ?, \"COURSE\" = ? WHERE \"GRDID\" = ?";
-            const aValues = [ oGradeBook.studid, oGradeBook.stdate, oGradeBook.course, oGradeBook.grdid ];
-
-            await db.executeUpdate(sSql, aValues);
-
-            res.type("application/json").status(200).send(JSON.stringify(oGradeBook));
-        } catch (e) {
-            next(e);
-        }
-    });
-
     return app;
 };

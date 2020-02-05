@@ -8,7 +8,7 @@ resources:
         parameters:
             service-plan: hdi-shared
             service: hanatrial
-            config: {schema: LEV_SCP}
+            config: {schema: LEV_SCP_TEST}
             shared: true
         properties:
             hdi-container-name: '${service-name}'

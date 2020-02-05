@@ -2,33 +2,25 @@
 
 const dbClass = require(global.__base + "utils/dbClass");
 const hdbext = require("@sap/hdbext");
+//const COMMON = require(global.__base + "utils/common");
 
 const ENTITY = [ { STUDENT:   "Student" },
                  { ADDRESS:   "Address" },
                  { GRADEBOOK: "GradeBook" },
                  { SUBJECT:   "Subject"} ];
 
-const addWhereClause = (req, aWhere) => {
-    req.query.SELECT.where = req.query.SELECT.where ?
-        req.query.SELECT.where.concat(["and"]).concat(aWhere) :
-        aWhere;
-
-};
-const getCompanyClause = sCompany => [{ref: ["mandt"]}, "=", {val: sCompany}];
 const getLangClause = sLang => [{ref: ["lang"]}, "=", {val: sLang}];
 
 module.exports = function () {
     this.before("READ", req => {
         req.log.debug(`BEFORE_READ ${req.target["@Common.Label"]}`);
 
-        //restrict by mandt
-        // addWhereClause(req, getCompanyClause("LeverX"));
-
-        //restrict by lang
-        // addWhereClause(req, getLangClause("EN"));
+     //   COMMON.checkOdataAuth(req, "himta.view");
     });
 
     this.on("CREATE", ENTITY.STUDENT, async (Student) => {
+
+        COMMON.checkOdataAuth(req, "himta.edit");
         req.log.debug(`ON CREATE ${req.target["@Common.Label"]}`);
 
         const {
@@ -41,12 +33,12 @@ module.exports = function () {
         var client = await dbClass.createConnection();
         let db = new dbClass(client);
 
-        if (!data.USID) {
-            data.USID = await db.getNextval("usid");
+        if (!data.STUDID) {
+            data.STUDID = await db.getNextval("studid");
         }
 
-        const sSql = `INSERT INTO "STUDENT" VALUES(?,?)`
-        const aValues = [oUser.usid, oUser.name];
+        const sSql = `INSERT INTO "STUDENT" VALUES(?,?,?,?)`
+        const aValues = [Student.studid, Student.name,  Student.surnm, Student.age];
 
         req.log.debug(aValues);
         req.log.debug(sSql);
