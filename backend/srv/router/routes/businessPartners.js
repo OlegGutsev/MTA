@@ -5,19 +5,17 @@ const cloudServices = require(global.__base + "utils/cloudServices");
 
 async function getAllBusinessPartners() {
 
-    const oOnPremiseSystem = await cloudServices.getOnPremiseSystemById("S4G");
-    const oDestination = global.DEBUG_MODE ? oOnPremiseSystem : {destinationName: "S4G" };
+   // const oOnPremiseSystem = await cloudServices.getOnPremiseSystemById("S4G");
+   // const oDestination = global.DEBUG_MODE ? oOnPremiseSystem : {destinationName: "S4G" };
 
-//    const oDestination = {
-//         destinationConfiguration:{
-//             test : "test",
-//             url: "http://s4g.leverx.local:8000",
-//             isTrustingAllCertificates: true,
-//             Name: "S4G",
-//             username: "OGUTSEV",
-//             password: "jktu1998"
-//         }
-//     };
+   const
+        destinationConfiguration={
+            test : "test",
+            url: "https://sapes5.sapdevcenter.com/",
+            username: "c5274581",
+            password: "Jktukalgas1998"
+        };
+
 // try {
 //     const aData = await ODataRequest(new ODataRequestConfig('get', "/sap/opu/odata/SAP/ZGUT_TEST_MARA/ZGUT_I_CMARATP" , "json"),
 //                                     oDestination)
@@ -25,7 +23,7 @@ async function getAllBusinessPartners() {
 //
     return BusinessPartner.requestBuilder()
         .getAll()
-        .execute(oDestination);
+        .execute(destinationConfiguration);
 }
 
 module.exports = () => {

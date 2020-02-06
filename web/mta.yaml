@@ -32,6 +32,7 @@ modules:
         requires:
             - {name: lev_dest}
             - {name: lev_conn}
+            - {name: lev_uaa}
 resources:
     -
         name: lev_deployer

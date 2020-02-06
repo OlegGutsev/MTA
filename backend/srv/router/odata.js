@@ -2,7 +2,7 @@
 
 const dbClass = require(global.__base + "utils/dbClass");
 const hdbext = require("@sap/hdbext");
-//const COMMON = require(global.__base + "utils/common");
+const COMMON = require(global.__base + "utils/common");
 
 const ENTITY = [ { STUDENT:   "Student" },
                  { ADDRESS:   "Address" },
@@ -13,14 +13,20 @@ const getLangClause = sLang => [{ref: ["lang"]}, "=", {val: sLang}];
 
 module.exports = function () {
     this.before("READ", req => {
-        req.log.debug(`BEFORE_READ ${req.target["@Common.Label"]}`);
-
-     //   COMMON.checkOdataAuth(req, "himta.view");
+        try {
+            req.log.debug(`BEFORE_READ ${req.target["@Common.Label"]}`);
+            console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+            console.log(req);
+            console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+            COMMON.checkOdataAuth(req, "himta.view");
+        } catch (error) {
+            console.log(error);
+        }
     });
 
     this.on("CREATE", ENTITY.STUDENT, async (Student) => {
 
-        COMMON.checkOdataAuth(req, "himta.edit");
+      //  COMMON.checkOdataAuth(req, "himta.edit");
         req.log.debug(`ON CREATE ${req.target["@Common.Label"]}`);
 
         const {

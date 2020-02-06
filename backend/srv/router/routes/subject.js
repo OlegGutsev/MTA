@@ -6,13 +6,17 @@ const express = require("express");
 
 const dbClass = require(global.__base + "utils/dbClass");
 const dbModelClass = require(global.__base + "model/dbModelClass");
-//const COMMON = require(global.__base + "utils/common");
+const COMMON = require(global.__base + "utils/common");
 const SUBJECT = "SUBJECT";
 
 
 function _prepareObject(oSubject, req) {
-  //  oSubject.changedBy = COMMON.getAjaxUser(req);
-    return oSubject;
+    try {
+        oSubject.changedBy = COMMON.getAjaxUser(req);
+        return oSubject;
+    } catch (e) {
+        console.log(e);
+    }
 }
 
 
@@ -21,7 +25,7 @@ module.exports = () => {
 
     app.get("/", async (req, res, next) => {
         try {
-       //     COMMON.checkAjaxAuth(req, "himta.view");
+            COMMON.checkAjaxAuth(req, "himta.view");
 
             const logger = req.loggingContext.getLogger("/Application");
             logger.info('subject get request');
@@ -42,7 +46,7 @@ module.exports = () => {
 
     app.post("/", async (req, res, next) => {
         try {
-        //    COMMON.checkAjaxAuth(req, "himta.edit");
+            COMMON.checkAjaxAuth(req, "himta.edit");
 
             const logger = req.loggingContext.getLogger("/Application");
             logger.info('subject post request');
@@ -66,7 +70,7 @@ module.exports = () => {
 
     app.put("/:sbjid", async (req, res, next) => {
         try {
-         //   COMMON.checkAjaxAuth(req, "himta.edit");
+            COMMON.checkAjaxAuth(req, "himta.edit");
 
             const logger = req.loggingContext.getLogger("/Application");
             logger.info('subject put request');
@@ -90,7 +94,7 @@ module.exports = () => {
 
     app.delete('/:sbjid', async (req, res, next) => {
         try {
-        //    COMMON.checkAjaxAuth(req, "himta.edit");
+            COMMON.checkAjaxAuth(req, "himta.edit");
 
             const logger = req.loggingContext.getLogger("/Application");
             logger.info('subject post request');

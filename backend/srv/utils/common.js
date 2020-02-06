@@ -26,8 +26,8 @@ function checkAjaxAuth(req, scope) {
         return;
     }
 
-    if (!req.authInfo.checkScope(`${req.authInfo.xsappname}.${scope}`)) {
-        throw new Error(`User doesn't have that scope: ${req.authInfo.xsappname}.${scope}`);
+    if (!req.attr.checkScope(`${req.attr.xsappname}.${scope}`)) {
+        throw new Error(`User doesn't have that scope: ${req.attr.xsappname}.${scope}`);
     }
 }
 
@@ -42,7 +42,7 @@ function checkOdataAuth(req, scope) {
     }
 
     if (!req.attr.checkScope(`${req.attr.xsappname}.${scope}`)) {
-        throw new Error(`User doesn't have that scope: ${req.authInfo.xsappname}.${scope}`);
+        throw new Error(`User doesn't have that scope: ${req.attr.xsappname}.${scope}`);
     }
 }
 
@@ -81,6 +81,11 @@ function getAjaxUser(req) {
     const email = getInnerProperty(["authInfo", "userInfo", "email"], req, undefined);
 
     const user = fio !== " " ? fio : email;
+    console.log("UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU");
+    console.log(fio);
+    console.log(email);
+    console.log(user);
+    console.log("UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU");
     if (!user) {
         throw new Error("User was not recognized");
     }
