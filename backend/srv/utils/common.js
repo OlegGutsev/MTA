@@ -85,7 +85,6 @@ function getAjaxUser(req) {
     console.log(fio);
     console.log(email);
     console.log(user);
-    console.log("UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU");
     if (!user) {
         throw new Error("User was not recognized");
     }
