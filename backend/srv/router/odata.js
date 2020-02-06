@@ -26,7 +26,7 @@ module.exports = function () {
 
     this.on("CREATE", ENTITY.STUDENT, async (Student) => {
 
-      //  COMMON.checkOdataAuth(req, "himta.edit");
+       // COMMON.checkOdataAuth(req, "himta.edit");
         req.log.debug(`ON CREATE ${req.target["@Common.Label"]}`);
 
         const {

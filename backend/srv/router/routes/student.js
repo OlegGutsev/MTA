@@ -11,7 +11,7 @@ const STUDENT = "STUDENT";
 
 function _prepareObject(oStudent, req) {
     try {
-        oStudent.changedBy = COMMON.getAjaxUser(req);
+       //oStudent.changedBy = COMMON.getAjaxUser(req);
         return oStudent;
     } catch (e) {
         console.log(e);
@@ -48,7 +48,7 @@ module.exports = () => {
     app.post("/", async (req, res, next) => {
         try {
             console.log(req);
-            COMMON.checkAjaxAuth(req, "himta.edit");
+           // COMMON.checkAjaxAuth(req, "himta.edit");
 
             const logger = req.loggingContext.getLogger("/Application");
             logger.info('Student post request');
@@ -72,7 +72,7 @@ module.exports = () => {
 
     app.put("/:studid", async (req, res, next) => {
         try {
-            COMMON.checkAjaxAuth(req, "himta.edit");
+           // COMMON.checkAjaxAuth(req, "himta.edit");
 
             const logger = req.loggingContext.getLogger("/Application");
             logger.info('Student put request');
@@ -96,7 +96,7 @@ module.exports = () => {
 
     app.delete('/:studid', async (req, res, next) => {
         try {
-           COMMON.checkAjaxAuth(req, "himta.edit");
+           //COMMON.checkAjaxAuth(req, "himta.edit");
 
             const logger = req.loggingContext.getLogger("/Application");
             logger.info('Student put request');

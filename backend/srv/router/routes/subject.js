@@ -12,7 +12,7 @@ const SUBJECT = "SUBJECT";
 
 function _prepareObject(oSubject, req) {
     try {
-        oSubject.changedBy = COMMON.getAjaxUser(req);
+      //  oSubject.changedBy = COMMON.getAjaxUser(req);
         return oSubject;
     } catch (e) {
         console.log(e);
@@ -46,7 +46,7 @@ module.exports = () => {
 
     app.post("/", async (req, res, next) => {
         try {
-            COMMON.checkAjaxAuth(req, "himta.edit");
+          //  COMMON.checkAjaxAuth(req, "himta.edit");
 
             const logger = req.loggingContext.getLogger("/Application");
             logger.info('subject post request');
@@ -70,7 +70,7 @@ module.exports = () => {
 
     app.put("/:sbjid", async (req, res, next) => {
         try {
-            COMMON.checkAjaxAuth(req, "himta.edit");
+         //   COMMON.checkAjaxAuth(req, "himta.edit");
 
             const logger = req.loggingContext.getLogger("/Application");
             logger.info('subject put request');
@@ -94,7 +94,7 @@ module.exports = () => {
 
     app.delete('/:sbjid', async (req, res, next) => {
         try {
-            COMMON.checkAjaxAuth(req, "himta.edit");
+        //    COMMON.checkAjaxAuth(req, "himta.edit");
 
             const logger = req.loggingContext.getLogger("/Application");
             logger.info('subject post request');

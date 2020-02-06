@@ -1,0 +1,1007 @@
+Retrieving logs for app lev_srv in org p2001378267trial / space dev as DETYRIK98@GMAIL.COM...
+
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _isConditional: null,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _etagValidationOutCome: 200,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _concurrentSegment: null,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _getConcurrentResourceHasBeenCalled: true,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _applicationData: null,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _batchInfo: null,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _deepInsertExpand: [] },
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT      odataRes: 
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT       OdataResponse {
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         domain: null,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _events: {},
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _eventsCount: 0,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _maxListeners: undefined,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _response: [Object],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _isBuffered: false,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _buffer: <Buffer >,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _preferencesApplied: null,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _statusCodeHasBeenSet: false,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _contract: [Object],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _logger: [Object] },
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT      req: 
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT       IncomingMessage {
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _readableState: [Object],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         readable: true,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         domain: null,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _events: [Object],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _eventsCount: 1,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _maxListeners: undefined,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         socket: [Object],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         connection: [Object],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         httpVersionMajor: 1,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         httpVersionMinor: 1,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         httpVersion: '1.1',
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         complete: true,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         headers: [Object],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         rawHeaders: [Array],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         trailers: {},
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         rawTrailers: [],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         aborted: false,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         upgrade: false,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         url: '/Student(\'1001\')?$expand=toAddress,toGradeBook($expand=toSubject)',
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         method: 'GET',
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         statusCode: null,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         statusMessage: null,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         client: [Object],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _consuming: false,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _dumped: false,
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         next: [Function: next],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         baseUrl: '/odata',
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         originalUrl: '/odata/Student(\'1001\')?$expand=toAddress,toGradeBook($expand=toSubject)',
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         _parsedUrl: [Object],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         params: {},
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         query: [Object],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         res: [Object],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         body: {},
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         loggingContext: [Object],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT         db: Connection {} } },
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT   error: [Function],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT   run: [Function],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT   log: 
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT    { debug: [Function],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT      path: [Function],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT      info: [Function],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT      warn: [Function: bound consoleCall],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT      warning: [Function: bound consoleCall],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT      error: [Function: bound consoleCall],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT      fatal: [Function: bound consoleCall] },
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT   reply: [Function],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT   reject: [Function],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT   user: 
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT    { id: 'anonymous',
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT      valueOf: [Function],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT      toString: [Function],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT      is: [Function],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT      has: [Function],
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT      locale: 'en' },
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT   attr: { scopes: [] } }
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT TypeError: req.attr.checkScope is not a function
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT     at Object.checkOdataAuth (/home/vcap/app/utils/common.js:44:19)
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT     at Object.before.req [as handler] (/home/vcap/app/router/odata.js:21:20)
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT     at Before._execute (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:52:32)
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT     at Promise (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:36:19)
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT     at new Promise (<anonymous>)
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT     at Before.executeHandlerIfListed (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:26:12)
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT     at Service._actionsFunctionsHandlers (/home/vcap/app/node_modules/@sap/cds-services/lib/services/Service.js:417:46)
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT     at Service.processEvent (/home/vcap/app/node_modules/@sap/cds-services/lib/services/Service.js:400:69)
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT     at _readEntityOrProperty (/home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:164:18)
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT     at _readAndTransform (/home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:280:10)
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT     at /home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:303:5
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT     at Promise (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:135:13)
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT     at new Promise (<anonymous>)
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT     at Dispatcher._handle (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:134:16)
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT     at Dispatcher.dispatch (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:91:29)
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT     at DispatcherCommand.execute (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/DispatcherCommand.js:67:30)
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT     at CommandExecutor._execute (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/CommandExecutor.js:79:25)
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT     at process.nextTick (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/CommandExecutor.js:89:53)
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT     at _combinedTickCallback (internal/process/next_tick.js:132:7)
+   2020-02-06T10:29:12.35+0300 [APP/PROC/WEB/0] OUT     at process._tickCallback (internal/process/next_tick.js:181:9)
+   2020-02-06T10:29:12.80+0300 [RTR/6] OUT p2001378267trial-dev-lev-srv.cfapps.eu10.hana.ondemand.com - [2020-02-06T07:29:12.349702425Z] "GET /odata/Student('1001')?$expand=toAddress,toGradeBook($expand=toSubject) HTTP/1.1" 200 0 315 "https://p2001378267trial-dev-router.cfapps.eu10.hana.ondemand.com/students/index.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36" "-" "10.0.137.1:61039" x_forwarded_for:"-" x_forwarded_proto:"https" vcap_request_id:"9761b236-24ae-4992-496d-f9abdae7f5ef" response_time:0.451054 gorouter_time:0.000161 app_id:"d14ecdaf-50ae-4878-a77d-d845a1394d1c" app_index:"0" x_correlationid:"-" tenantid:"-" x_scp_request_id:"f64514ca-26e4-4bd0-9877-d02a10ecb6a1-5E3BC048-4224507" x_b3_traceid:"46f37c3f1d7590b8" x_b3_spanid:"46f37c3f1d7590b8" x_b3_parentspanid:"-" b3:"46f37c3f1d7590b8-46f37c3f1d7590b8"
+   2020-02-06T10:29:12.80+0300 [RTR/6] OUT 
+   2020-02-06T10:29:16.51+0300 [APP/PROC/WEB/0] OUT AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT { data: {},
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT   query: 
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT    Select {
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      SELECT: 
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT       { columns: [Array],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         from: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         orderBy: [Array],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         limit: [Object] } },
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT   target: 
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT    entity {
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      kind: 'entity',
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      source: 'Student',
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      '@Capabilities.InsertRestrictions.Insertable': false,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      '@Capabilities.UpdateRestrictions.Updatable': false,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      '@Capabilities.DeleteRestrictions.Deletable': false,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      elements: 
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT       { studid: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         name: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         surnm: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         age: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         toAddress: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         toGradeBook: [Object] },
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      '@Common.Label': 'Student',
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      '@cds.persistence.name': 'ACADEMICSERVICE_STUDENT' },
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT   statements: 
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT    { SELECT: { from: [Function: from], one: [Function: one] },
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      INSERT: [Function],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      UPDATE: [Function: entity],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      DELETE: [Function: Delete] },
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT   _: 
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT    { req: 
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT       IncomingMessage {
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _readableState: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         readable: false,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         domain: null,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _events: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _eventsCount: 1,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _maxListeners: undefined,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         socket: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         connection: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         httpVersionMajor: 1,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         httpVersionMinor: 1,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         httpVersion: '1.1',
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         complete: true,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         headers: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         rawHeaders: [Array],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         trailers: {},
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         rawTrailers: [],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         aborted: false,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         upgrade: false,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         url: '/$batch',
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         method: 'POST',
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         statusCode: null,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         statusMessage: null,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         client: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _consuming: true,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _dumped: false,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         next: [Function: next],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         baseUrl: '/odata',
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         originalUrl: '/odata/$batch',
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _parsedUrl: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         params: {},
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         query: {},
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         res: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         body: {},
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         loggingContext: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         db: Connection {},
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         read: [Function] },
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      doNotFinishTransaction: true,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      odataReq: 
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT       OdataRequest {
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _inRequest: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _serviceResolutionFn: [Function],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _odataRequestId: '~00',
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _atomicityGroupId: null,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _url: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _parsedUrlResult: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _rawBaseUri: '/',
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _rawODataPath: 'Student',
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _queryOptions: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _uriInfo: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _contract: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _body: null,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _preferences: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _service: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _logger: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _validateEtagHasBeenCalled: false,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _isConditional: null,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _etagValidationOutCome: 200,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _concurrentSegment: null,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _getConcurrentResourceHasBeenCalled: true,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _applicationData: null,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _batchInfo: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _deepInsertExpand: [] },
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      odataRes: 
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT       OdataResponse {
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         domain: null,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _events: {},
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _eventsCount: 0,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _maxListeners: undefined,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _response: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _isBuffered: false,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _buffer: <Buffer >,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _preferencesApplied: null,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _statusCodeHasBeenSet: false,
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _contract: [Object],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT         _logger: [Object] },
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      endTransactionIfConnected: [Function] },
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT   error: [Function],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT   run: [Function],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT   log: 
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT    { debug: [Function],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      path: [Function],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      info: [Function],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      warn: [Function: bound consoleCall],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      warning: [Function: bound consoleCall],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      error: [Function: bound consoleCall],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      fatal: [Function: bound consoleCall] },
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT   reply: [Function],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT   reject: [Function],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT   user: 
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT    { id: 'anonymous',
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      valueOf: [Function],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      toString: [Function],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      is: [Function],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      has: [Function],
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT      locale: 'en' },
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT   attr: { scopes: [] } }
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT TypeError: req.attr.checkScope is not a function
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at Object.checkOdataAuth (/home/vcap/app/utils/common.js:44:19)
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at Object.before.req [as handler] (/home/vcap/app/router/odata.js:21:20)
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at Before._execute (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:52:32)
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at Promise (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:36:19)
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at new Promise (<anonymous>)
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at Before.executeHandlerIfListed (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:26:12)
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at Service._actionsFunctionsHandlers (/home/vcap/app/node_modules/@sap/cds-services/lib/services/Service.js:417:46)
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at Service.processEvent (/home/vcap/app/node_modules/@sap/cds-services/lib/services/Service.js:400:69)
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at _readCollectionNoCount (/home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:190:18)
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at _readCollectionWithCount (/home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:223:25)
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at _readAndTransform (/home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:274:14)
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at /home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:303:5
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at Promise (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:135:13)
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at new Promise (<anonymous>)
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at Dispatcher._handle (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:134:16)
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at Dispatcher.dispatch (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:91:29)
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at DispatcherCommand.execute (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/DispatcherCommand.js:67:30)
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at CommandExecutor._execute (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/CommandExecutor.js:79:25)
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at process.nextTick (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/CommandExecutor.js:89:53)
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at _combinedTickCallback (internal/process/next_tick.js:132:7)
+   2020-02-06T10:29:16.59+0300 [APP/PROC/WEB/0] OUT     at process._tickCallback (internal/process/next_tick.js:181:9)
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT { data: {},
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT   target: 
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT    entity {
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      kind: 'entity',
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      source: 'Student',
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      '@Capabilities.InsertRestrictions.Insertable': false,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      '@Capabilities.UpdateRestrictions.Updatable': false,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      '@Capabilities.DeleteRestrictions.Deletable': false,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      elements: 
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT       { studid: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         name: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         surnm: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         age: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         toAddress: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         toGradeBook: [Object] },
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      '@Common.Label': 'Student',
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      '@cds.persistence.name': 'ACADEMICSERVICE_STUDENT' },
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT   statements: 
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT    { SELECT: { from: [Function: from], one: [Function: one] },
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      INSERT: [Function],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      UPDATE: [Function: entity],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      DELETE: [Function: Delete] },
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT   _: 
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT    { req: 
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT       IncomingMessage {
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _readableState: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         readable: false,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         domain: null,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _events: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _eventsCount: 1,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _maxListeners: undefined,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         socket: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         connection: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         httpVersionMajor: 1,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         httpVersionMinor: 1,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         httpVersion: '1.1',
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         complete: true,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         headers: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         rawHeaders: [Array],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         trailers: {},
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         rawTrailers: [],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         aborted: false,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         upgrade: false,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         url: '/$batch',
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         method: 'POST',
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         statusCode: null,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         statusMessage: null,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         client: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _consuming: true,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _dumped: false,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         next: [Function: next],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         baseUrl: '/odata',
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         originalUrl: '/odata/$batch',
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _parsedUrl: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         params: {},
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         query: {},
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         res: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         body: {},
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         loggingContext: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         db: Connection {},
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         read: [Function] },
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      doNotFinishTransaction: true,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      odataReq: 
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT       OdataRequest {
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _inRequest: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _serviceResolutionFn: [Function],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _odataRequestId: '~00',
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _atomicityGroupId: null,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _url: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _parsedUrlResult: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _rawBaseUri: '/',
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _rawODataPath: 'Student',
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _queryOptions: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _uriInfo: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _contract: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _body: null,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _preferences: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _service: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _logger: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _validateEtagHasBeenCalled: false,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _isConditional: null,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _etagValidationOutCome: 200,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _concurrentSegment: null,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _getConcurrentResourceHasBeenCalled: true,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _applicationData: null,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _batchInfo: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _deepInsertExpand: [] },
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      odataRes: 
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT       OdataResponse {
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         domain: null,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _events: {},
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _eventsCount: 0,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _maxListeners: undefined,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _response: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _isBuffered: false,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _buffer: <Buffer >,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _preferencesApplied: null,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _statusCodeHasBeenSet: false,
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _contract: [Object],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT         _logger: [Object] },
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      endTransactionIfConnected: [Function] },
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT   error: [Function],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT   run: [Function],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT   log: 
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT    { debug: [Function],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      path: [Function],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      info: [Function],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      warn: [Function: bound consoleCall],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      warning: [Function: bound consoleCall],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      error: [Function: bound consoleCall],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      fatal: [Function: bound consoleCall] },
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT   reply: [Function],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT   reject: [Function],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT   user: 
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT    { id: 'anonymous',
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      valueOf: [Function],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      toString: [Function],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      is: [Function],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      has: [Function],
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT      locale: 'en' },
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT   attr: { scopes: [] },
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT   query: Select { SELECT: { columns: [Array], from: [Object] } } }
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT TypeError: req.attr.checkScope is not a function
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at Object.checkOdataAuth (/home/vcap/app/utils/common.js:44:19)
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at Object.before.req [as handler] (/home/vcap/app/router/odata.js:21:20)
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at Before._execute (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:52:32)
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at Promise (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:36:19)
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at new Promise (<anonymous>)
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at Before.executeHandlerIfListed (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:26:12)
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at Service._actionsFunctionsHandlers (/home/vcap/app/node_modules/@sap/cds-services/lib/services/Service.js:417:46)
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at Service.processEvent (/home/vcap/app/node_modules/@sap/cds-services/lib/services/Service.js:400:69)
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at _getCount (/home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:106:8)
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at _readCollectionWithCount (/home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:223:72)
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at _readAndTransform (/home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:274:14)
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at /home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:303:5
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at Promise (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:135:13)
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at new Promise (<anonymous>)
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at Dispatcher._handle (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:134:16)
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at Dispatcher.dispatch (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:91:29)
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at DispatcherCommand.execute (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/DispatcherCommand.js:67:30)
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at CommandExecutor._execute (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/CommandExecutor.js:79:25)
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at process.nextTick (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/CommandExecutor.js:89:53)
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at _combinedTickCallback (internal/process/next_tick.js:132:7)
+   2020-02-06T10:29:16.60+0300 [APP/PROC/WEB/0] OUT     at process._tickCallback (internal/process/next_tick.js:181:9)
+   2020-02-06T10:29:16.61+0300 [RTR/6] OUT p2001378267trial-dev-lev-srv.cfapps.eu10.hana.ondemand.com - [2020-02-06T07:29:16.497805536Z] "POST /odata/$batch HTTP/1.1" 200 388 1069 "https://p2001378267trial-dev-router.cfapps.eu10.hana.ondemand.com/students/index.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36" "-" "10.0.137.1:61039" x_forwarded_for:"-" x_forwarded_proto:"https" vcap_request_id:"7f2df4d8-f5f1-4cd0-6299-3c2c81988de8" response_time:0.120493 gorouter_time:0.000214 app_id:"d14ecdaf-50ae-4878-a77d-d845a1394d1c" app_index:"0" x_correlationid:"-" tenantid:"-" x_scp_request_id:"f64514ca-26e4-4bd0-9877-d02a10ecb6a1-5E3BC048-422455C" x_b3_traceid:"94dbb41d9861c8e4" x_b3_spanid:"94dbb41d9861c8e4" x_b3_parentspanid:"-" b3:"94dbb41d9861c8e4-94dbb41d9861c8e4"
+   2020-02-06T10:29:16.61+0300 [RTR/6] OUT 
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT { data: { studid: '1001' },
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT   query: [Getter/Setter],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT   target: 
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT    entity {
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      kind: 'entity',
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      source: 'Student',
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      '@Capabilities.InsertRestrictions.Insertable': false,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      '@Capabilities.UpdateRestrictions.Updatable': false,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      '@Capabilities.DeleteRestrictions.Deletable': false,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      elements: 
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT       { studid: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         name: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         surnm: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         age: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         toAddress: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         toGradeBook: [Object] },
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      '@Common.Label': 'Student',
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      '@cds.persistence.name': 'ACADEMICSERVICE_STUDENT' },
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT   statements: [Getter],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT   _: 
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT    { odataReq: 
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT       OdataRequest {
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _inRequest: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _serviceResolutionFn: [Function],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _odataRequestId: null,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _atomicityGroupId: null,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _url: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _parsedUrlResult: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _rawBaseUri: '/',
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _rawODataPath: 'Student(\'1001\')',
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _queryOptions: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _uriInfo: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _contract: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _body: null,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _preferences: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _service: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _logger: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _validateEtagHasBeenCalled: false,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _isConditional: null,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _etagValidationOutCome: 200,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _concurrentSegment: null,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _getConcurrentResourceHasBeenCalled: true,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _applicationData: null,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _batchInfo: null,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _deepInsertExpand: [] },
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      odataRes: 
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT       OdataResponse {
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         domain: null,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _events: {},
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _eventsCount: 0,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _maxListeners: undefined,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _response: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _isBuffered: false,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _buffer: <Buffer >,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _preferencesApplied: null,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _statusCodeHasBeenSet: false,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _contract: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _logger: [Object] },
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      req: 
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT       IncomingMessage {
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _readableState: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         readable: true,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         domain: null,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _events: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _eventsCount: 1,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _maxListeners: undefined,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         socket: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         connection: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         httpVersionMajor: 1,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         httpVersionMinor: 1,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         httpVersion: '1.1',
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         complete: true,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         headers: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         rawHeaders: [Array],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         trailers: {},
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         rawTrailers: [],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         aborted: false,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         upgrade: false,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         url: '/Student(\'1001\')?$expand=toAddress,toGradeBook($expand=toSubject)',
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         method: 'GET',
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         statusCode: null,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         statusMessage: null,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         client: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _consuming: false,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _dumped: false,
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         next: [Function: next],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         baseUrl: '/odata',
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         originalUrl: '/odata/Student(\'1001\')?$expand=toAddress,toGradeBook($expand=toSubject)',
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         _parsedUrl: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         params: {},
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         query: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         res: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         body: {},
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         loggingContext: [Object],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT         db: Connection {} } },
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT   error: [Function],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT   run: [Function],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT   log: 
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT    { debug: [Function],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      path: [Function],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      info: [Function],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      warn: [Function: bound consoleCall],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      warning: [Function: bound consoleCall],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      error: [Function: bound consoleCall],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      fatal: [Function: bound consoleCall] },
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT   reply: [Function],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT   reject: [Function],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT   user: 
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT    { id: 'anonymous',
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      valueOf: [Function],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      toString: [Function],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      is: [Function],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      has: [Function],
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT      locale: 'en' },
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT   attr: { scopes: [] } }
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT TypeError: req.attr.checkScope is not a function
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT     at Object.checkOdataAuth (/home/vcap/app/utils/common.js:44:19)
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT     at Object.before.req [as handler] (/home/vcap/app/router/odata.js:21:20)
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT     at Before._execute (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:52:32)
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT     at Promise (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:36:19)
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT     at new Promise (<anonymous>)
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT     at Before.executeHandlerIfListed (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:26:12)
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT     at Service._actionsFunctionsHandlers (/home/vcap/app/node_modules/@sap/cds-services/lib/services/Service.js:417:46)
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT     at Service.processEvent (/home/vcap/app/node_modules/@sap/cds-services/lib/services/Service.js:400:69)
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT     at _readEntityOrProperty (/home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:164:18)
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT     at _readAndTransform (/home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:280:10)
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT     at /home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:303:5
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT     at Promise (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:135:13)
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT     at new Promise (<anonymous>)
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT     at Dispatcher._handle (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:134:16)
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT     at Dispatcher.dispatch (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:91:29)
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT     at DispatcherCommand.execute (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/DispatcherCommand.js:67:30)
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT     at CommandExecutor._execute (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/CommandExecutor.js:79:25)
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT     at process.nextTick (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/CommandExecutor.js:89:53)
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT     at _combinedTickCallback (internal/process/next_tick.js:132:7)
+   2020-02-06T10:29:18.49+0300 [APP/PROC/WEB/0] OUT     at process._tickCallback (internal/process/next_tick.js:181:9)
+   2020-02-06T10:29:18.50+0300 [RTR/6] OUT p2001378267trial-dev-lev-srv.cfapps.eu10.hana.ondemand.com - [2020-02-06T07:29:18.487497530Z] "GET /odata/Student('1001')?$expand=toAddress,toGradeBook($expand=toSubject) HTTP/1.1" 200 0 315 "https://p2001378267trial-dev-router.cfapps.eu10.hana.ondemand.com/students/index.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36" "-" "10.0.137.1:61039" x_forwarded_for:"-" x_forwarded_proto:"https" vcap_request_id:"fe67cd33-2d60-4bc6-4467-4a1d9782c6fe" response_time:0.021956 gorouter_time:0.000215 app_id:"d14ecdaf-50ae-4878-a77d-d845a1394d1c" app_index:"0" x_correlationid:"-" tenantid:"-" x_scp_request_id:"f64514ca-26e4-4bd0-9877-d02a10ecb6a1-5E3BC04C-42248A8" x_b3_traceid:"3f7c017c4312022e" x_b3_spanid:"3f7c017c4312022e" x_b3_parentspanid:"-" b3:"3f7c017c4312022e-3f7c017c4312022e"
+   2020-02-06T10:29:18.50+0300 [RTR/6] OUT 
+   2020-02-06T10:29:37.48+0300 [APP/PROC/WEB/0] OUT AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT { data: {},
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   query: 
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT    Select {
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      SELECT: 
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT       { columns: [Array],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         from: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         orderBy: [Array],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         limit: [Object] } },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   target: 
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT    entity {
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      kind: 'entity',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      source: 'Student',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      '@Capabilities.InsertRestrictions.Insertable': false,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      '@Capabilities.UpdateRestrictions.Updatable': false,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      '@Capabilities.DeleteRestrictions.Deletable': false,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      elements: 
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT       { studid: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         name: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         surnm: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         age: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         toAddress: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         toGradeBook: [Object] },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      '@Common.Label': 'Student',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      '@cds.persistence.name': 'ACADEMICSERVICE_STUDENT' },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   statements: 
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT    { SELECT: { from: [Function: from], one: [Function: one] },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      INSERT: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      UPDATE: [Function: entity],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      DELETE: [Function: Delete] },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   _: 
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT    { req: 
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT       IncomingMessage {
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _readableState: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         readable: false,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         domain: null,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _events: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _eventsCount: 1,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _maxListeners: undefined,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         socket: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         connection: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         httpVersionMajor: 1,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         httpVersionMinor: 1,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         httpVersion: '1.1',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         complete: true,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         headers: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         rawHeaders: [Array],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         trailers: {},
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         rawTrailers: [],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         aborted: false,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         upgrade: false,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         url: '/$batch',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         method: 'POST',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         statusCode: null,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         statusMessage: null,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         client: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _consuming: true,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _dumped: false,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         next: [Function: next],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         baseUrl: '/odata',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         originalUrl: '/odata/$batch',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _parsedUrl: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         params: {},
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         query: {},
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         res: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         body: {},
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         loggingContext: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         db: Connection {},
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         read: [Function] },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      doNotFinishTransaction: true,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      odataReq: 
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT       OdataRequest {
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _inRequest: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _serviceResolutionFn: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _odataRequestId: '~00',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _atomicityGroupId: null,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _url: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _parsedUrlResult: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _rawBaseUri: '/',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _rawODataPath: 'Student',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _queryOptions: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _uriInfo: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _contract: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _body: null,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _preferences: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _service: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _logger: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _validateEtagHasBeenCalled: false,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _isConditional: null,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _etagValidationOutCome: 200,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _concurrentSegment: null,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _getConcurrentResourceHasBeenCalled: true,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _applicationData: null,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _batchInfo: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _deepInsertExpand: [] },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      odataRes: 
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT       OdataResponse {
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         domain: null,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _events: {},
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _eventsCount: 0,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _maxListeners: undefined,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _response: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _isBuffered: false,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _buffer: <Buffer >,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _preferencesApplied: null,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _statusCodeHasBeenSet: false,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _contract: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _logger: [Object] },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      endTransactionIfConnected: [Function] },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   error: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   run: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   log: 
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT    { debug: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      path: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      info: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      warn: [Function: bound consoleCall],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      warning: [Function: bound consoleCall],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      error: [Function: bound consoleCall],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      fatal: [Function: bound consoleCall] },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   reply: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   reject: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   user: 
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT    { id: 'anonymous',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      valueOf: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      toString: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      is: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      has: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      locale: 'en' },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   attr: { scopes: [] } }
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT TypeError: req.attr.checkScope is not a function
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at Object.checkOdataAuth (/home/vcap/app/utils/common.js:44:19)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at Object.before.req [as handler] (/home/vcap/app/router/odata.js:21:20)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at Before._execute (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:52:32)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at Promise (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:36:19)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at new Promise (<anonymous>)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at Before.executeHandlerIfListed (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:26:12)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at Service._actionsFunctionsHandlers (/home/vcap/app/node_modules/@sap/cds-services/lib/services/Service.js:417:46)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at Service.processEvent (/home/vcap/app/node_modules/@sap/cds-services/lib/services/Service.js:400:69)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at _readCollectionNoCount (/home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:190:18)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at _readCollectionWithCount (/home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:223:25)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at _readAndTransform (/home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:274:14)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at /home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:303:5
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at Promise (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:135:13)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at new Promise (<anonymous>)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at Dispatcher._handle (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:134:16)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at Dispatcher.dispatch (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:91:29)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at DispatcherCommand.execute (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/DispatcherCommand.js:67:30)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at CommandExecutor._execute (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/CommandExecutor.js:79:25)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at process.nextTick (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/CommandExecutor.js:89:53)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at _combinedTickCallback (internal/process/next_tick.js:132:7)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at process._tickCallback (internal/process/next_tick.js:181:9)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT { data: {},
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   target: 
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT    entity {
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      kind: 'entity',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      source: 'Student',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      '@Capabilities.InsertRestrictions.Insertable': false,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      '@Capabilities.UpdateRestrictions.Updatable': false,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      '@Capabilities.DeleteRestrictions.Deletable': false,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      elements: 
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT       { studid: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         name: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         surnm: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         age: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         toAddress: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         toGradeBook: [Object] },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      '@Common.Label': 'Student',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      '@cds.persistence.name': 'ACADEMICSERVICE_STUDENT' },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   statements: 
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT    { SELECT: { from: [Function: from], one: [Function: one] },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      INSERT: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      UPDATE: [Function: entity],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      DELETE: [Function: Delete] },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   _: 
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT    { req: 
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT       IncomingMessage {
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _readableState: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         readable: false,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         domain: null,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _events: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _eventsCount: 1,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _maxListeners: undefined,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         socket: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         connection: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         httpVersionMajor: 1,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         httpVersionMinor: 1,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         httpVersion: '1.1',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         complete: true,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         headers: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         rawHeaders: [Array],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         trailers: {},
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         rawTrailers: [],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         aborted: false,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         upgrade: false,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         url: '/$batch',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         method: 'POST',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         statusCode: null,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         statusMessage: null,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         client: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _consuming: true,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _dumped: false,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         next: [Function: next],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         baseUrl: '/odata',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         originalUrl: '/odata/$batch',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _parsedUrl: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         params: {},
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         query: {},
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         res: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         body: {},
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         loggingContext: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         db: Connection {},
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         read: [Function] },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      doNotFinishTransaction: true,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      odataReq: 
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT       OdataRequest {
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _inRequest: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _serviceResolutionFn: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _odataRequestId: '~00',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _atomicityGroupId: null,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _url: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _parsedUrlResult: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _rawBaseUri: '/',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _rawODataPath: 'Student',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _queryOptions: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _uriInfo: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _contract: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _body: null,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _preferences: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _service: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _logger: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _validateEtagHasBeenCalled: false,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _isConditional: null,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _etagValidationOutCome: 200,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _concurrentSegment: null,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _getConcurrentResourceHasBeenCalled: true,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _applicationData: null,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _batchInfo: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _deepInsertExpand: [] },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      odataRes: 
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT       OdataResponse {
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         domain: null,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _events: {},
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _eventsCount: 0,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _maxListeners: undefined,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _response: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _isBuffered: false,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _buffer: <Buffer >,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _preferencesApplied: null,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _statusCodeHasBeenSet: false,
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _contract: [Object],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT         _logger: [Object] },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      endTransactionIfConnected: [Function] },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   error: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   run: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   log: 
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT    { debug: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      path: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      info: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      warn: [Function: bound consoleCall],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      warning: [Function: bound consoleCall],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      error: [Function: bound consoleCall],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      fatal: [Function: bound consoleCall] },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   reply: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   reject: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   user: 
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT    { id: 'anonymous',
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      valueOf: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      toString: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      is: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      has: [Function],
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT      locale: 'en' },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   attr: { scopes: [] },
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT   query: Select { SELECT: { columns: [Array], from: [Object] } } }
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT TypeError: req.attr.checkScope is not a function
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at Object.checkOdataAuth (/home/vcap/app/utils/common.js:44:19)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at Object.before.req [as handler] (/home/vcap/app/router/odata.js:21:20)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at Before._execute (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:52:32)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at Promise (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:36:19)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at new Promise (<anonymous>)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at Before.executeHandlerIfListed (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:26:12)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at Service._actionsFunctionsHandlers (/home/vcap/app/node_modules/@sap/cds-services/lib/services/Service.js:417:46)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at Service.processEvent (/home/vcap/app/node_modules/@sap/cds-services/lib/services/Service.js:400:69)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at _getCount (/home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:106:8)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at _readCollectionWithCount (/home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:223:72)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at _readAndTransform (/home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:274:14)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at /home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:303:5
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at Promise (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:135:13)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at new Promise (<anonymous>)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at Dispatcher._handle (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:134:16)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at Dispatcher.dispatch (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:91:29)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at DispatcherCommand.execute (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/DispatcherCommand.js:67:30)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at CommandExecutor._execute (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/CommandExecutor.js:79:25)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at process.nextTick (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/CommandExecutor.js:89:53)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at _combinedTickCallback (internal/process/next_tick.js:132:7)
+   2020-02-06T10:29:37.49+0300 [APP/PROC/WEB/0] OUT     at process._tickCallback (internal/process/next_tick.js:181:9)
+   2020-02-06T10:29:37.51+0300 [RTR/6] OUT p2001378267trial-dev-lev-srv.cfapps.eu10.hana.ondemand.com - [2020-02-06T07:29:37.482198658Z] "POST /odata/$batch HTTP/1.1" 200 388 1069 "https://p2001378267trial-dev-router.cfapps.eu10.hana.ondemand.com/students/index.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36" "-" "10.0.137.1:61039" x_forwarded_for:"-" x_forwarded_proto:"https" vcap_request_id:"e56b960a-0634-4040-60bb-ff473ac45974" response_time:0.029361 gorouter_time:0.000281 app_id:"d14ecdaf-50ae-4878-a77d-d845a1394d1c" app_index:"0" x_correlationid:"-" tenantid:"-" x_scp_request_id:"f64514ca-26e4-4bd0-9877-d02a10ecb6a1-5E3BC04E-4224A63" x_b3_traceid:"835ad7c70e14aa02" x_b3_spanid:"835ad7c70e14aa02" x_b3_parentspanid:"-" b3:"835ad7c70e14aa02-835ad7c70e14aa02"
+   2020-02-06T10:29:37.51+0300 [RTR/6] OUT 
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT { data: { studid: '1001' },
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT   query: [Getter/Setter],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT   target: 
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT    entity {
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      kind: 'entity',
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      source: 'Student',
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      '@Capabilities.InsertRestrictions.Insertable': false,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      '@Capabilities.UpdateRestrictions.Updatable': false,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      '@Capabilities.DeleteRestrictions.Deletable': false,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      elements: 
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT       { studid: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         name: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         surnm: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         age: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         toAddress: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         toGradeBook: [Object] },
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      '@Common.Label': 'Student',
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      '@cds.persistence.name': 'ACADEMICSERVICE_STUDENT' },
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT   statements: [Getter],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT   _: 
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT    { odataReq: 
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT       OdataRequest {
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _inRequest: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _serviceResolutionFn: [Function],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _odataRequestId: null,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _atomicityGroupId: null,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _url: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _parsedUrlResult: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _rawBaseUri: '/',
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _rawODataPath: 'Student(\'1001\')',
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _queryOptions: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _uriInfo: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _contract: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _body: null,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _preferences: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _service: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _logger: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _validateEtagHasBeenCalled: false,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _isConditional: null,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _etagValidationOutCome: 200,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _concurrentSegment: null,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _getConcurrentResourceHasBeenCalled: true,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _applicationData: null,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _batchInfo: null,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _deepInsertExpand: [] },
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      odataRes: 
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT       OdataResponse {
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         domain: null,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _events: {},
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _eventsCount: 0,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _maxListeners: undefined,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _response: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _isBuffered: false,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _buffer: <Buffer >,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _preferencesApplied: null,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _statusCodeHasBeenSet: false,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _contract: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _logger: [Object] },
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      req: 
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT       IncomingMessage {
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _readableState: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         readable: true,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         domain: null,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _events: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _eventsCount: 1,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _maxListeners: undefined,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         socket: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         connection: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         httpVersionMajor: 1,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         httpVersionMinor: 1,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         httpVersion: '1.1',
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         complete: true,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         headers: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         rawHeaders: [Array],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         trailers: {},
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         rawTrailers: [],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         aborted: false,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         upgrade: false,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         url: '/Student(\'1001\')?$expand=toAddress,toGradeBook($expand=toSubject)',
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         method: 'GET',
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         statusCode: null,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         statusMessage: null,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         client: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _consuming: false,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _dumped: false,
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         next: [Function: next],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         baseUrl: '/odata',
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         originalUrl: '/odata/Student(\'1001\')?$expand=toAddress,toGradeBook($expand=toSubject)',
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         _parsedUrl: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         params: {},
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         query: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         res: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         body: {},
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         loggingContext: [Object],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT         db: Connection {} } },
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT   error: [Function],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT   run: [Function],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT   log: 
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT    { debug: [Function],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      path: [Function],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      info: [Function],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      warn: [Function: bound consoleCall],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      warning: [Function: bound consoleCall],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      error: [Function: bound consoleCall],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      fatal: [Function: bound consoleCall] },
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT   reply: [Function],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT   reject: [Function],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT   user: 
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT    { id: 'anonymous',
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      valueOf: [Function],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      toString: [Function],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      is: [Function],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      has: [Function],
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT      locale: 'en' },
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT   attr: { scopes: [] } }
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT TypeError: req.attr.checkScope is not a function
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT     at Object.checkOdataAuth (/home/vcap/app/utils/common.js:44:19)
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT     at Object.before.req [as handler] (/home/vcap/app/router/odata.js:21:20)
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT     at Before._execute (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:52:32)
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT     at Promise (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:36:19)
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT     at new Promise (<anonymous>)
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT     at Before.executeHandlerIfListed (/home/vcap/app/node_modules/@sap/cds-services/lib/services/hooks/Before.js:26:12)
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT     at Service._actionsFunctionsHandlers (/home/vcap/app/node_modules/@sap/cds-services/lib/services/Service.js:417:46)
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT     at Service.processEvent (/home/vcap/app/node_modules/@sap/cds-services/lib/services/Service.js:400:69)
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT     at _readEntityOrProperty (/home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:164:18)
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT     at _readAndTransform (/home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:280:10)
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT     at /home/vcap/app/node_modules/@sap/cds-services/lib/adapter/odata-v4/handlers/read.js:303:5
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT     at Promise (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:135:13)
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT     at new Promise (<anonymous>)
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT     at Dispatcher._handle (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:134:16)
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT     at Dispatcher.dispatch (/home/vcap/app/node_modules/@sap/odata-server/lib/core/Dispatcher.js:91:29)
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT     at DispatcherCommand.execute (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/DispatcherCommand.js:67:30)
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT     at CommandExecutor._execute (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/CommandExecutor.js:79:25)
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT     at process.nextTick (/home/vcap/app/node_modules/@sap/odata-server/lib/invocation/CommandExecutor.js:89:53)
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT     at _combinedTickCallback (internal/process/next_tick.js:132:7)
+   2020-02-06T10:29:40.07+0300 [APP/PROC/WEB/0] OUT     at process._tickCallback (internal/process/next_tick.js:181:9)
+   2020-02-06T10:29:40.09+0300 [RTR/6] OUT p2001378267trial-dev-lev-srv.cfapps.eu10.hana.ondemand.com - [2020-02-06T07:29:40.071399659Z] "GET /odata/Student('1001')?$expand=toAddress,toGradeBook($expand=toSubject) HTTP/1.1" 200 0 315 "https://p2001378267trial-dev-router.cfapps.eu10.hana.ondemand.com/students/index.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36" "-" "10.0.137.1:61039" x_forwarded_for:"-" x_forwarded_proto:"https" vcap_request_id:"4b08288f-effb-4ff5-414e-b5882ada6220" response_time:0.023928 gorouter_time:0.000136 app_id:"d14ecdaf-50ae-4878-a77d-d845a1394d1c" app_index:"0" x_correlationid:"-" tenantid:"-" x_scp_request_id:"f64514ca-26e4-4bd0-9877-d02a10ecb6a1-5E3BC061-422597D" x_b3_traceid:"eaa686c9846239c7" x_b3_spanid:"eaa686c9846239c7" x_b3_parentspanid:"-" b3:"eaa686c9846239c7-eaa686c9846239c7"
+   2020-02-06T10:29:40.09+0300 [RTR/6] OUT 
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR (node:61) UnhandledPromiseRejectionWarning: ReferenceError: tracer is not defined
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at app.post (/home/vcap/app/router/routes/subject.js:66:13)
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at Layer.handle [as handle_request] (/home/vcap/app/node_modules/express/lib/router/layer.js:95:5)
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at next (/home/vcap/app/node_modules/express/lib/router/route.js:137:13)
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at Route.dispatch (/home/vcap/app/node_modules/express/lib/router/route.js:112:3)
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at Layer.handle [as handle_request] (/home/vcap/app/node_modules/express/lib/router/layer.js:95:5)
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at /home/vcap/app/node_modules/express/lib/router/index.js:281:22
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at Function.process_params (/home/vcap/app/node_modules/express/lib/router/index.js:335:12)
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at next (/home/vcap/app/node_modules/express/lib/router/index.js:275:10)
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at Function.handle (/home/vcap/app/node_modules/express/lib/router/index.js:174:3)
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at router (/home/vcap/app/node_modules/express/lib/router/index.js:47:12)
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at Layer.handle [as handle_request] (/home/vcap/app/node_modules/express/lib/router/layer.js:95:5)
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at trim_prefix (/home/vcap/app/node_modules/express/lib/router/index.js:317:13)
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at /home/vcap/app/node_modules/express/lib/router/index.js:284:7
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at Function.process_params (/home/vcap/app/node_modules/express/lib/router/index.js:335:12)
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at next (/home/vcap/app/node_modules/express/lib/router/index.js:275:10)
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at /home/vcap/app/node_modules/@sap/hdbext/lib/middleware.js:38:7
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at /home/vcap/app/node_modules/@sap/hdbext/lib/client-factory.js:39:5
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at /home/vcap/app/node_modules/@sap/hdbext/node_modules/async/dist/async.js:3838:9
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at /home/vcap/app/node_modules/@sap/hdbext/node_modules/async/dist/async.js:421:16
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at replenish (/home/vcap/app/node_modules/@sap/hdbext/node_modules/async/dist/async.js:941:25)
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at iterateeCallback (/home/vcap/app/node_modules/@sap/hdbext/node_modules/async/dist/async.js:931:17)
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR     at /home/vcap/app/node_modules/@sap/hdbext/node_modules/async/dist/async.js:906:16
+   2020-02-06T10:29:48.23+0300 [APP/PROC/WEB/0] ERR (node:61) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
