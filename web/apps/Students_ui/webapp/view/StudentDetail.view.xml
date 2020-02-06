@@ -1,0 +1,142 @@
+<mvc:View 
+	controllerName="students.controller.StudentDetail" 
+	xmlns="sap.uxap"
+	xmlns:m="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout"
+	xmlns:forms="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+    xmlns:f="sap.f"
+	displayBlock="true">
+	<m:Page showHeader="false">
+		<ObjectPageLayout id="idObjectPage" 
+			showTitleInHeaderContent="true"
+			busyIndicatorDelay="0"
+			upperCaseAnchorBar="false">
+			<headerTitle>
+				<ObjectPageDynamicHeaderTitle>
+						<expandedHeading>
+							<m:FlexBox wrap="Wrap" fitContainer="true" alignItems="Center">
+								<m:Title text="{/name} {/surnm}" wrapping="true" class="sapUiSmallMarginEnd"/>
+							</m:FlexBox>
+						</expandedHeading>
+
+						<snappedHeading>
+							<m:FlexBox wrap="Wrap" fitContainer="true" alignItems="Center">
+								<m:FlexBox wrap="NoWrap" fitContainer="true" alignItems="Center" class="sapUiTinyMarginEnd">
+								<m:Avatar class="sapUiSmallMarginEnd sapUiSmallMarginTop" displaySize="S"/>
+								<m:Title text="{/name} {/surnm}" wrapping="true" class="sapUiSmallMarginEnd"/>
+								</m:FlexBox>
+							</m:FlexBox>
+						</snappedHeading>
+
+						<expandedContent>
+							<m:Text text="{/studid}"/>
+						</expandedContent>
+					
+						<actions>
+							<m:Button
+									id="edit"
+									text="Edit"
+									type="Emphasized"
+									press="onEdit"/>
+							<m:Button
+									icon="sap-icon://action"
+									type="Transparent"/>
+						</actions>
+
+				</ObjectPageDynamicHeaderTitle>	
+			</headerTitle>
+
+			<headerContent>
+					<m:FlexBox wrap="Wrap" fitContainer="true" alignItems="Stretch">
+						<m:Avatar class="sapUiSmallMarginEnd sapUiSmallMarginTop" displaySize="L"/>
+						<l:VerticalLayout class="sapUiSmallMarginEnd sapUiSmallMarginTop">
+							<m:ObjectStatus title="Test Link"/>
+							<m:Link text="Aleh.Hutsau@sap.com"/>
+						</l:VerticalLayout>
+						<l:VerticalLayout class="sapUiSmallMarginEnd sapUiSmallMarginTop">
+							<m:ObjectStatus title="Student Id" text="{/studid}"/>
+							<m:ObjectStatus title="Address Id" text="{/toAddress/adid}"/>
+							<m:ObjectStatus title="GradeBook Id" text="{/toGradeBook/grdid}"/>
+						</l:VerticalLayout>		
+					</m:FlexBox>
+			</headerContent>
+
+			<sections>
+				<ObjectPageSection titleUppercase="false" id="GeneralSection" title="General Information">
+					<subSections>
+						<ObjectPageSubSection  id="GeneralSubSection"/>
+					</subSections>
+				</ObjectPageSection>
+				<ObjectPageSection titleUppercase="false" id="GradeBookSection" title="GradeBook Information">
+					<subSections> 
+						<ObjectPageSubSection  id="GradeBookSubSection">
+						<blocks>
+							<m:Table
+								id="SubjectList"
+								items="{ 
+										path: '/toGradeBook/toSubject', 
+										sorter: { path: 'sbjid', descending: false }, 
+										parameters: { $count: true } 
+								}" 
+								updateFinished="onUpdateFinished"
+								class="sapFDynamicPageAlignContent"
+								mode = "SingleSelectLeft"
+								selectionChange="onSelectionChange"
+								growing="true"
+								growingThreshold="2">
+
+								<m:headerToolbar>
+									<m:OverflowToolbar>
+										<m:Title id="TableTitle" level="H2"/>						
+										<m:ToolbarSpacer/>
+										<m:SearchField placeholder="Type in a Subject Name" id="searchField" search="onSearch" width="17.5rem"/>
+										<m:OverflowToolbarButton id="delButton" icon="sap-icon://less" type="Transparent" press="onDelete" enabled="false"/>
+										<m:OverflowToolbarButton id="addButton" icon="sap-icon://add" type="Transparent" press="onCreate"/>
+									</m:OverflowToolbar>
+								</m:headerToolbar>
+
+								<m:columns>
+									<m:Column>
+										<m:Text text="Subject Id"/>
+									</m:Column>
+									<m:Column>
+										<m:Text text="Subject Name"/>
+									</m:Column>
+									<m:Column>
+										<m:Text text="Mark"/>
+									</m:Column>
+								</m:columns>
+
+								<m:items>
+									 <m:ColumnListItem type="Navigation"  press="onItemPress">
+										<m:cells>
+											<m:ObjectIdentifier title="{sbjid}"/>
+										</m:cells>
+										<m:cells>
+											<m:Text text="{name}"/>
+										</m:cells>
+										<m:cells>
+											<m:ObjectNumber number="{mark}"/>
+										</m:cells>
+									</m:ColumnListItem>
+								</m:items>
+    						</m:Table>
+						</blocks>
+						</ObjectPageSubSection>
+					</subSections>
+				</ObjectPageSection>
+			</sections>
+
+			<footer>
+				<m:OverflowToolbar>
+					<m:ToolbarSpacer />
+					<m:Button type="Emphasized" id="save" text="Save" press="onSave"/>
+					<m:Button text="Cancel" id="cancel" press="onCancel"/>
+				</m:OverflowToolbar>
+			</footer>
+
+		</ObjectPageLayout>
+	</m:Page>
+</mvc:View>
